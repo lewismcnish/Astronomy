@@ -1,13 +1,15 @@
 # Fdb version 3
-["pdflatex"] 1672429265 "/Users/lewismcnish/Documents/GitHub/astro/semester_1_lab_report/Extra_solar_report.tex" "Extra_solar_report.pdf" "Extra_solar_report" 1672429265
-  "/Users/lewismcnish/Documents/GitHub/astro/semester_1_lab_report/Extra_solar_report.tex" 1672429264 1891 1426e5e3b502de13fe76018ec3734788 ""
+["pdflatex"] 1672443301 "/Users/lewismcnish/Documents/vscode/Astronomy/semester_1_lab_report/Extra_solar_report.tex" "Extra_solar_report.pdf" "Extra_solar_report" 1672443301
+  "/Users/lewismcnish/Documents/vscode/Astronomy/semester_1_lab_report/Extra_solar_report.tex" 1672443301 2202 5bad32b088f0f4e11077a0530be2e9e2 ""
   "/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/map/fontname/texfonts.map" 1647894602 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map" 1647894602 4385071 4481eb56d8dc7e3e247ed9a139c582cd ""
   "/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1647894602 1004 54797486969f23fa377b128694d548df ""
   "/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1647894602 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1647894602 916 f87d7c45f9c908e672703b83b72241a3 ""
+  "/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm" 1647894602 924 9904cf1d39e9767e7a3622f2a125a565 ""
   "/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm" 1647894602 928 2dc8d444221b7a635bb58038579b861a ""
   "/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1647894602 908 2921f8a10601f252058503cc6570e581 ""
+  "/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm" 1647894602 940 75ac932a52f80982a9f8ea75d03a34cf ""
   "/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1647894602 940 228d6584342e91276bf566bcf9716b83 ""
   "/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1647894602 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm" 1647894602 1328 5442e22a7072966dbaf88ca900acf3f0 ""
@@ -29,6 +31,7 @@
   "/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1647894602 35469 70d41d2b9ea31d5d813066df7c99281c ""
   "/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1647894602 35752 024fb6c41858982481f6968b5fc26508 ""
   "/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1647894602 32722 d7379af29a190c3f453aba36302ff5a9 ""
+  "/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1647894602 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb" 1647894602 33993 9b89b85fd2d9df0482bd47194d1d3bf3 ""
   "/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb" 1647894602 35022 e40946b20bfdcd1099eafb2bcd9f25dd ""
   "/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1647894602 71627 94eb9990bed73c364d7f53f960cc8c5b ""
@@ -59,8 +62,8 @@
   "/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/tex/latex/ragged2e/ragged2e.sty" 1647894602 9244 53da791cc5f775633a8a852b08533fe2 ""
   "/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/web2c/texmf.cnf" 1647894602 40174 4e2f94c7b252db2ad3c0cfdef6912ab3 ""
   "/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-var/web2c/pdftex/pdflatex.fmt" 1647894602 2826557 3e645ef023e114e50e3f9051cb6a1bbb ""
-  "Extra_solar_report.aux" 1672429265 32 044b7f8fc9779af7531264e0c5c84b6d "pdflatex"
-  "Extra_solar_report.tex" 1672429264 1891 1426e5e3b502de13fe76018ec3734788 ""
+  "Extra_solar_report.aux" 1672443301 32 044b7f8fc9779af7531264e0c5c84b6d "pdflatex"
+  "Extra_solar_report.tex" 1672443301 2202 5bad32b088f0f4e11077a0530be2e9e2 ""
   (generated)
   "Extra_solar_report.aux"
   "Extra_solar_report.log"
