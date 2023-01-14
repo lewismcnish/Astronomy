@@ -10,8 +10,9 @@
 \usepackage{ragged2e}
 \usepackage{array}
 \usepackage{tabularx}
-\usepackage{multirow}
 %list of images
+
+
 \graphicspath{{./images/}}
 
 \pagestyle{myheadings}
@@ -108,20 +109,14 @@ For the stars (HD-28185 and HD-73256) the values obtained for $v_{mean}$, $v_{s}
 and $\phi_{max}$ 
 
 
-\begin{table}[h!]
-    \begin{center}
-      \caption{Your first table.}
-      \label{tab:table1}
-      \begin{tabular}{c|c|c|c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
-        {Stars} & {$v_{mean} $} & {$v_{s}$} & {$\phi_{max}$}\\
-        \hline
-        HD-28185 & $ 2.18\times10^4 \pm4.00ms^{-1}$ & b\\
-        \hline
-        HD-73256 & 10.1 & b\\
-        
-      \end{tabular}
-    \end{center}
-  \end{table}
+\begin{table}[]
+    \begin{tabularx}{5cm}{|c|c|c|c|}
+    \hline
+    Star     & \begin{tabularx}[c]{@{}c@{}}$\\ v_{mean} $\end{tabular}                     & \begin{tabularx}[c]{@{}c@{}}$\\ v_{s}$\end{tabular}                              & \begin{tabularx}[c]{@{}c@{}}$\\  \phi_{max}$\end{tabular}                  \\ \hline
+    HD-28185 & \begin{tabularx}[c]{@{}c@{}}$\\ 2.18\times10^4 \pm4.00ms^{-1}$\end{tabular} & \begin{tabularx}[c]{@{}c@{}}$67.6\\ \pm\\ 6.16\\ ms^{-\\ 1\\ } \\ $\end{tabular} & \begin{tabularx}[c]{@{}c@{}}$\\  8.59\times10^{-2} \pm 0.01 $\end{tabular} \\ \hline
+    HD-73256 & $1.35\times10^4\pm2.80ms^{-1}$                                             & $1,20\times10^2\pm3.92ms^{-1}$                                                  & $5.73\times10^{-2}\pm0.01$                                                \\ \hline
+    \end{tabular}
+\end{table}
 
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Homebrew) (preloaded format=pdflatex 2022.11.23)  14 JAN 2023 22:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Homebrew) (preloaded format=pdflatex 2022.11.23)  14 JAN 2023 23:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -149,40 +149,64 @@ Package: ragged2e 2021/12/15 v3.1 ragged2e Package
 \RaggedLeftParindent=\skip72
 \RaggedRightParindent=\skip73
 \JustifyingParindent=\skip74
+) (/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/tex/latex/tools/array.sty
+Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
+\col@sep=\dimen158
+\ar@mcellbox=\box52
+\extrarowheight=\dimen159
+\NC@list=\toks23
+\extratabsurround=\skip75
+\backup@length=\skip76
+\ar@cellbox=\box53
+) (/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+\TX@col@width=\dimen160
+\TX@old@table=\dimen161
+\TX@old@col=\dimen162
+\TX@target=\dimen163
+\TX@delta=\dimen164
+\TX@cols=\count274
+\TX@ftn=\toks24
+) (/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip77
+\multirow@cntb=\count275
+\multirow@dima=\skip78
+\bigstrutjot=\dimen165
 ) (/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count274
-\l__pdf_internal_box=\box52
+\l__color_backend_stack_int=\count276
+\l__pdf_internal_box=\box54
 ) (./Extra_solar_report.aux)
 \openout1 = `Extra_solar_report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
  (/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count275
-\scratchdimen=\dimen158
-\scratchbox=\box53
-\nofMPsegments=\count276
-\nofMParguments=\count277
-\everyMPshowfont=\toks23
-\MPscratchCnt=\count278
-\MPscratchDim=\dimen159
-\MPnumerator=\count279
-\makeMPintoPDFobject=\count280
-\everyMPtoPDFconversion=\toks24
+\scratchcounter=\count277
+\scratchdimen=\dimen166
+\scratchbox=\box55
+\nofMPsegments=\count278
+\nofMParguments=\count279
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count280
+\MPscratchDim=\dimen167
+\MPnumerator=\count281
+\makeMPintoPDFobject=\count282
+\everyMPtoPDFconversion=\toks26
 ) (/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -223,11 +247,11 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 29.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 31.
 (/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 29.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 31.
  (/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -236,15 +260,15 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <images/HD-28185_init.png, id=11, 759.83875pt x 738.76pt>
 File: images/HD-28185_init.png Graphic file (type png)
 <use images/HD-28185_init.png>
-Package pdftex.def Info: images/HD-28185_init.png  used on input line 70.
+Package pdftex.def Info: images/HD-28185_init.png  used on input line 72.
 (pdftex.def)             Requested size: 170.71652pt x 165.9771pt.
 <images/HD-73256_init.png, id=13, 762.85pt x 738.76pt>
 File: images/HD-73256_init.png Graphic file (type png)
 <use images/HD-73256_init.png>
-Package pdftex.def Info: images/HD-73256_init.png  used on input line 71.
+Package pdftex.def Info: images/HD-73256_init.png  used on input line 73.
 (pdftex.def)             Requested size: 170.71652pt x 165.32329pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--72
+Underfull \hbox (badness 10000) in paragraph at lines 72--74
 [][]
  []
 
@@ -257,34 +281,112 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <images/HD-28185_phase.png, id=25, 752.8125pt x 738.76pt>
 File: images/HD-28185_phase.png Graphic file (type png)
 <use images/HD-28185_phase.png>
-Package pdftex.def Info: images/HD-28185_phase.png  used on input line 90.
+Package pdftex.def Info: images/HD-28185_phase.png  used on input line 92.
 (pdftex.def)             Requested size: 170.71652pt x 167.53271pt.
 <images/HD-73256_phase.png, id=26, 752.8125pt x 738.76pt>
 File: images/HD-73256_phase.png Graphic file (type png)
 <use images/HD-73256_phase.png>
-Package pdftex.def Info: images/HD-73256_phase.png  used on input line 91.
+Package pdftex.def Info: images/HD-73256_phase.png  used on input line 93.
 (pdftex.def)             Requested size: 170.71652pt x 167.53271pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 90--92
+Underfull \hbox (badness 10000) in paragraph at lines 92--94
 [][]
  []
 
-[3 <./images/HD-28185_phase.png> <./images/HD-73256_phase.png>] [4
+/Users/lewismcnish/Documents/vscode/Astronomy/semester_1_lab_report/Extra_solar_report.tex:118: Missing $ inserted.
+<inserted text> 
+                $
+l.118 ...8\times10^4 \pm4.00ms^{-1}$ & $67.6\\ \pm
+                                                  \\ 6.16\\ ms^{-\\ 1\\ } \\...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
-] (./Extra_solar_report.aux) ) 
-Here is how much of TeX's memory you used:
- 3373 strings out of 478268
- 52505 string characters out of 5835365
- 348223 words of memory out of 5000000
- 21554 multiletter control sequences out of 15000+600000
- 477774 words of font info for 61 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 55i,6n,62p,302b,228s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on Extra_solar_report.pdf (4 pages, 205695 bytes).
-PDF statistics:
- 81 PDF objects out of 1000 (max. 8388607)
- 44 compressed objects within 1 object stream
- 0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+/Users/lewismcnish/Documents/vscode/Astronomy/semester_1_lab_report/Extra_solar_report.tex:118: Missing $ inserted.
+<inserted text> 
+                $
+l.118 ...8\times10^4 \pm4.00ms^{-1}$ & $67.6\\ \pm
+                                                  \\ 6.16\\ ms^{-\\ 1\\ } \\...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
+/Users/lewismcnish/Documents/vscode/Astronomy/semester_1_lab_report/Extra_solar_report.tex:118: Missing $ inserted.
+<inserted text> 
+                $
+l.118 ...mes10^4 \pm4.00ms^{-1}$ & $67.6\\ \pm\\ 6
+                                                  .16\\ ms^{-\\ 1\\ } \\ $\\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/lewismcnish/Documents/vscode/Astronomy/semester_1_lab_report/Extra_solar_report.tex:118: Missing $ inserted.
+<inserted text> 
+                $
+l.118 ...pm4.00ms^{-1}$ & $67.6\\ \pm\\ 6.16\\ ms^
+                                                  {-\\ 1\\ } \\ $\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/lewismcnish/Documents/vscode/Astronomy/semester_1_lab_report/Extra_solar_report.tex:118: Missing } inserted.
+<inserted text> 
+                }
+l.118 ...ms^{-1}$ & $67.6\\ \pm\\ 6.16\\ ms^{-\\ 1
+                                                  \\ } \\ $\\
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+/Users/lewismcnish/Documents/vscode/Astronomy/semester_1_lab_report/Extra_solar_report.tex:118: Missing $ inserted.
+<inserted text> 
+                $
+l.118 ...ms^{-1}$ & $67.6\\ \pm\\ 6.16\\ ms^{-\\ 1
+                                                  \\ } \\ $\\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/lewismcnish/Documents/vscode/Astronomy/semester_1_lab_report/Extra_solar_report.tex:118: Misplaced \cr.
+\reserved@c ->\ifnum 0=`{}\fi \cr 
+                                  
+l.118 ...& $67.6\\ \pm\\ 6.16\\ ms^{-\\ 1\\ } \\ $
+                                                  \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/Users/lewismcnish/Documents/vscode/Astronomy/semester_1_lab_report/Extra_solar_report.tex:119: Misplaced \cr.
+\reserved@c ->\ifnum 0=`{}\fi \cr 
+                                  
+l.119         \hline
+                    
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/Users/lewismcnish/Documents/vscode/Astronomy/semester_1_lab_report/Extra_solar_report.tex:119: Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
+l.119         \hline
+                    
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+/Users/lewismcnish/Documents/vscode/Astronomy/semester_1_lab_report/Extra_solar_report.tex:119: Missing $ inserted.
+<inserted text> 
+                $
+l.119         \hline
+                    
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/lewismcnish/Documents/vscode/Astronomy/semest
