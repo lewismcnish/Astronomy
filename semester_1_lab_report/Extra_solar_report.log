@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Homebrew) (preloaded format=pdflatex 2022.11.23)  31 DEC 2022 19:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Homebrew) (preloaded format=pdflatex 2022.11.23)  14 JAN 2023 22:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -156,20 +156,20 @@ File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 ) (./Extra_solar_report.aux)
 \openout1 = `Extra_solar_report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
  (/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count275
@@ -223,33 +223,68 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 25.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 29.
 (/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 25.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 29.
  (/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}] [2
+{/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}]
+<images/HD-28185_init.png, id=11, 759.83875pt x 738.76pt>
+File: images/HD-28185_init.png Graphic file (type png)
+<use images/HD-28185_init.png>
+Package pdftex.def Info: images/HD-28185_init.png  used on input line 70.
+(pdftex.def)             Requested size: 170.71652pt x 165.9771pt.
+<images/HD-73256_init.png, id=13, 762.85pt x 738.76pt>
+File: images/HD-73256_init.png Graphic file (type png)
+<use images/HD-73256_init.png>
+Package pdftex.def Info: images/HD-73256_init.png  used on input line 71.
+(pdftex.def)             Requested size: 170.71652pt x 165.32329pt.
 
-] [3
+Underfull \hbox (badness 10000) in paragraph at lines 70--72
+[][]
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[2
+
+ <./images/HD-28185_init.png> <./images/HD-73256_init.png>]
+<images/HD-28185_phase.png, id=25, 752.8125pt x 738.76pt>
+File: images/HD-28185_phase.png Graphic file (type png)
+<use images/HD-28185_phase.png>
+Package pdftex.def Info: images/HD-28185_phase.png  used on input line 90.
+(pdftex.def)             Requested size: 170.71652pt x 167.53271pt.
+<images/HD-73256_phase.png, id=26, 752.8125pt x 738.76pt>
+File: images/HD-73256_phase.png Graphic file (type png)
+<use images/HD-73256_phase.png>
+Package pdftex.def Info: images/HD-73256_phase.png  used on input line 91.
+(pdftex.def)             Requested size: 170.71652pt x 167.53271pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--92
+[][]
+ []
+
+[3 <./images/HD-28185_phase.png> <./images/HD-73256_phase.png>] [4
 
 ] (./Extra_solar_report.aux) ) 
 Here is how much of TeX's memory you used:
- 3339 strings out of 478268
- 51638 string characters out of 5835365
- 344192 words of memory out of 5000000
- 21526 multiletter control sequences out of 15000+600000
+ 3373 strings out of 478268
+ 52505 string characters out of 5835365
+ 348223 words of memory out of 5000000
+ 21554 multiletter control sequences out of 15000+600000
  477774 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,8n,62p,337b,218s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb>
-Output written on Extra_solar_report.pdf (3 pages, 116311 bytes).
+ 55i,6n,62p,302b,228s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on Extra_solar_report.pdf (4 pages, 205695 bytes).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
- 38 compressed objects within 1 object stream
+ 81 PDF objects out of 1000 (max. 8388607)
+ 44 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -9,12 +9,16 @@
 \usepackage[headheight=65pt,tmargin=150pt,headsep=95pt]{geometry}
 \usepackage{ragged2e}
 
-\pagestyle{myheadings}
-\markright{Extra Solar Lab Report\hfill Lewis McNish\hfill 1/1/2023\hfill}
+%list of images
+\graphicspath{{./images/}}
 
-\title{\textbf{Identifying Extra Solar Planets and their Key Features using the Doppler Wobble and Planetary Transits Methods}}
-\author{Lewis M$^{c}$Nish (University of Glasgow)}
-\date{1/1/2023}
+\pagestyle{myheadings}
+\markright{Extra Solar Lab Report\hfill 2663452m\hfill 16/1/2023\hfill}
+
+\title{\textbf{Identifying Extra Solar Planets and their Key Features using 
+the Doppler Wobble and Planetary Transits Methods}}
+\author{2663452m (University of Glasgow)}
+\date{16/1/2023}
 
 
 
@@ -36,16 +40,72 @@ This is the abstract
 \twocolumn
 \section*{Introduction and Background}
 
-\section*{Aims}
-Understand the effect of Doppler shifts on the intensity of stellar spectra and use the Python scipy.optimize library to determine “best-fit” radial velocities from high- resolution spectra observed at different epochs
-Derive a radial velocity curve i.e. radial velocity as a function of orbital phase for each star, and use fitting to estimate the amplitude of each curve 
-Estimate the mass and semi-major axis of each planet.$^1$
+\section*{The Doppler Wobble Method of extra-solar planets}
+\par
+For the analysis on data of two stars and the existence of an extra-solar planets 
+around them, the doppler wobble method was used. This method is based on measuring the 
+radial velocity of the stars (HD-28185 and HD-73256) as they move towards and away from 
+the observer. Thus
+producing a doppler shift in the light emitted from the stars, that can be used to 
+determine the velocity of the stars in the plane of the observer's line of sight. 
+\par
+To determine the radial velocity, observations were made of the stars on different
+Julian dates, recording the wavelength of light emitted as well as the observed intensity 
+of the light. The radial velocity of the stars can then be calculated using the doppler
+shifted wavelength and intensity, as provided in the Python Library.$^1$ 
+\begin{equation}\label{eq:wavelength doppler}\lambda_{obs} = \lambda_{emit}{(1+v/c)}
+\end{equation}
+
+\begin{equation}\label{eq:intensity doppler}I_{obs} = \frac{I_{emit}}{(1+v/c)}
+\end{equation}
+where $\lambda_{obs}$ is the observed wavelength, $\lambda_{emit}$ is the 
+emitted wavelength, $I_{obs}$ is the observed intensity, $I_{emit}$ is the emitted 
+intensity, $v$ is the radial velocity of the stars and $c$ is the speed of light.
+From this it was possible to calculate the radial velocity of each star on each date.
+This was done using the Python SCIPY library.$^2$ An uncertainty in the radial velocity
+was assigned to each date of each star of $\pm 15 ms^-1$.$^1$
+\par
+
+\begin{figure}[h]
+\includegraphics[width=6cm]{images/HD-28185_init.png}
+\includegraphics[width=6cm]{images/HD-73256_init.png}
+\caption{Radial velocity of HD-28185 and HD-73256 as a function of time (Julian Date)}
+\label{fig:HD-_init}
+\end{figure}
+
+When plotting the radial velocity as a function of time, as seen in figure 1, it was
+possible to see that there was a periodic sinusoidal pattern in the data, however, 
+it was not very accurate as the time between observations varyed.
+To correctly plot the radial velocity of the stars over time it was neccessary 
+to calculate the phase of each star through the period of the orbit. In this experiment
+the phase is defined as the fraction of the orbital period that has elapsed.
+The radial velocity of the stars (HD-28185 and HD-73256) as a function of phase 
+was then plotted, as seen in figure 2. This allowed for a more accurate representation
+of the radial velocity of the stars as a function of time, as the time between 
+observations was more consistent.
+\par
+\newpage
+
+\begin{figure}[h]
+\includegraphics[width=6cm]{images/HD-28185_phase.png}
+\includegraphics[width=6cm]{images/HD-73256_phase.png}
+\caption{Radial velocity of HD-28185 and HD-73256 as a function of phase}
+\label{fig:HD-_phase}
+\end{figure}
+
+Now that there was a clear correlation between the radial velocity of the stars and
+time, it was possible to calculate characteristics about the extra-solar planets in 
+orbit around the stars (HD-28185 and HD-73256) using %equation 2 from lab script. 
+By using the data calculated so far in this report it was possible to now calculate 
+the mean radial velocity $v_{mean} $, the observed phase $\phi_{obs}$ and the 
+phase when the radial velocity curve is at a maximum $\phi_{max}$ of the stars 
 
 \section*{Method}
 For the Doppler Wobble method it was first necessary to 
 import all the data provided into a directory that could be 
 accessed by the code source files. From here it was possible to start
-writing the Python script that would take the data and produce the required outputs as outlined in the aims above.
+writing the Python script that would take the data and produce the required 
+outputs as outlined in the aims above.
 
 
 
@@ -57,16 +117,16 @@ For doppler wobble method 1.1 result is graph. \par
 of each star and plot the radial velocity as a function of phase\par
 1.4 calculate values of v$_{mean}$ v$_{s}$ and $\phi_{max}$ and determine errors,
 for both stars\par
-1.5 calculate the mass of each planet and the semi-major axis of each planet with errors\par
+1.5 calculate the mass of each planet and the semi-major axis of each planet 
+with errors\par
 
 
 
 \section*{Analysis}
-\section*{Discussion}
 
-\section*{Conclusion}
 
-\section*{References}
+
+
 
 % All relevant sections for Planetary transits method
 \newpage
@@ -74,8 +134,11 @@ for both stars\par
 
 \section*{Aims}
 
-Obtain a phase-folded photometric light curve for a star with a transiting planetary companion. Use this to estimate the radius and orbital semi-major axis of the planet
-Apply the method of least-squares to estimate mean apparent magnitudes during the transit and non-transit phase. Hence estimate the radius of the planet.$^1$
+Obtain a phase-folded photometric light curve for a star with a transiting 
+planetary companion. Use this to estimate the radius and orbital semi-major 
+axis of the planet
+Apply the method of least-squares to estimate mean apparent magnitudes 
+during the transit and non-transit phase. Hence estimate the radius of the planet.$^1$
 
 
 \section*{Method}
@@ -83,7 +146,7 @@ Apply the method of least-squares to estimate mean apparent magnitudes during th
 \section*{Results}
 
 \section*{Analysis}
-\section*{Discussion}
+
 
 \section*{Conclusion}
 
