@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Homebrew) (preloaded format=pdflatex 2022.11.23)  14 JAN 2023 23:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Homebrew) (preloaded format=pdflatex 2022.11.23)  15 JAN 2023 00:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -293,100 +293,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 92--94
 [][]
  []
 
-/Users/lewismcnish/Documents/vscode/Astronomy/semester_1_lab_report/Extra_solar_report.tex:118: Missing $ inserted.
-<inserted text> 
-                $
-l.118 ...8\times10^4 \pm4.00ms^{-1}$ & $67.6\\ \pm
-                                                  \\ 6.16\\ ms^{-\\ 1\\ } \\...
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
 
-/Users/lewismcnish/Documents/vscode/Astronomy/semester_1_lab_report/Extra_solar_report.tex:118: Missing $ inserted.
-<inserted text> 
-                $
-l.118 ...8\times10^4 \pm4.00ms^{-1}$ & $67.6\\ \pm
-                                                  \\ 6.16\\ ms^{-\\ 1\\ } \\...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+Overfull \hbox (49.69592pt too wide) in paragraph at lines 115--125
+ [] 
+ []
 
-/Users/lewismcnish/Documents/vscode/Astronomy/semester_1_lab_report/Extra_solar_report.tex:118: Missing $ inserted.
-<inserted text> 
-                $
-l.118 ...mes10^4 \pm4.00ms^{-1}$ & $67.6\\ \pm\\ 6
-                                                  .16\\ ms^{-\\ 1\\ } \\ $\\
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
+[3 <./images/HD-28185_phase.png> <./images/HD-73256_phase.png>] [4
 
-/Users/lewismcnish/Documents/vscode/Astronomy/semester_1_lab_report/Extra_solar_report.tex:118: Missing $ inserted.
-<inserted text> 
-                $
-l.118 ...pm4.00ms^{-1}$ & $67.6\\ \pm\\ 6.16\\ ms^
-                                                  {-\\ 1\\ } \\ $\\
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+] (./Extra_solar_report.aux) ) 
+Here is how much of TeX's memory you used:
+ 3575 strings out of 478268
+ 56188 string characters out of 5835365
+ 352087 words of memory out of 5000000
+ 21746 multiletter control sequences out of 15000+600000
+ 477774 words of font info for 61 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 55i,10n,62p,302b,230s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on Extra_solar_report.pdf (4 pages, 207621 bytes).
+PDF statistics:
+ 81 PDF objects out of 1000 (max. 8388607)
+ 44 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-/Users/lewismcnish/Documents/vscode/Astronomy/semester_1_lab_report/Extra_solar_report.tex:118: Missing } inserted.
-<inserted text> 
-                }
-l.118 ...ms^{-1}$ & $67.6\\ \pm\\ 6.16\\ ms^{-\\ 1
-                                                  \\ } \\ $\\
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-/Users/lewismcnish/Documents/vscode/Astronomy/semester_1_lab_report/Extra_solar_report.tex:118: Missing $ inserted.
-<inserted text> 
-                $
-l.118 ...ms^{-1}$ & $67.6\\ \pm\\ 6.16\\ ms^{-\\ 1
-                                                  \\ } \\ $\\
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-/Users/lewismcnish/Documents/vscode/Astronomy/semester_1_lab_report/Extra_solar_report.tex:118: Misplaced \cr.
-\reserved@c ->\ifnum 0=`{}\fi \cr 
-                                  
-l.118 ...& $67.6\\ \pm\\ 6.16\\ ms^{-\\ 1\\ } \\ $
-                                                  \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/lewismcnish/Documents/vscode/Astronomy/semester_1_lab_report/Extra_solar_report.tex:119: Misplaced \cr.
-\reserved@c ->\ifnum 0=`{}\fi \cr 
-                                  
-l.119         \hline
-                    
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/lewismcnish/Documents/vscode/Astronomy/semester_1_lab_report/Extra_solar_report.tex:119: Misplaced \noalign.
-\hline ->\noalign 
-                  {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
-l.119         \hline
-                    
-I expect to see \noalign only after the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-/Users/lewismcnish/Documents/vscode/Astronomy/semester_1_lab_report/Extra_solar_report.tex:119: Missing $ inserted.
-<inserted text> 
-                $
-l.119         \hline
-                    
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-/Users/lewismcnish/Documents/vscode/Astronomy/semest
