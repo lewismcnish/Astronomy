@@ -11,6 +11,10 @@
 \usepackage{array}
 \usepackage{tabularx}
 \usepackage{multirow}
+\usepackage{booktabs}
+\usepackage[style=phys]{biblatex}
+
+
 %list of images
 \graphicspath{{./images/}}
 
@@ -41,6 +45,40 @@ This is the abstract
 
 \twocolumn
 \section*{Introduction and Background}
+The search for extra-solar planets has been a growing field of Astronomy for the 
+past 30 years since the first extra-solar planet was discovered in 1992, this 
+detection was made indirectly by observing gaps in a pulsars emission of radio waves.$^1 $
+However it wasnt until 1995 that the first direct detection of an extra-solar planet 
+via the radial velocity method was made. This method is based on measuring the 
+wavelength and intensity of light emitted from a star over a period of time, 
+from this, a pattern can be seen where when the star is moving towards the observer
+the wavelength of the light emitted is shifted towards the blue end of the 
+Electromagnetic spectrum 
+(resulting in a lower wavelength) and when the star is moving away from the observer
+an increase in wavelength is observed (redshift). 
+\par
+By measuring the wavelength and intensity and thus the radial velocity of a star as 
+a function of time, it is possible to determine characteristics about the Planetary
+companions in orbit such as the mass of the planet using Kepler's third law and Newton's
+law of Unviersal Gravitation, an equation can derived as seen in equation 1.
+\begin{equation}\label{eq:mass of planet eq}
+  v_s = \left(\frac{2\pi G}{T}\right)^{1/3}M_s^{-2/3}m_p
+\end{equation}
+where $v_s$ is the amplitude of the radial velocity curve (RVC), $G$ is the unviversal
+gravitational constant, $T$ is the orbital period of the planet, $M_s$ is the mass of
+the star and $m_p$ is the mass of the planet.
+\par
+From the mass of the planet the semi-major axis of the orbit of the planet can be 
+calculated using Kepler's third law as seen in equation 2.
+
+\begin{equation}\label{eq:semi-major axis eq}
+  G(M_s+m_p) = \frac{4\pi^2a^3}{T^2}
+\end{equation}
+where $a$ is the semi-major axis of the orbit, $G$ is the unviversal gravitational
+and the rest of the variables are the same as in equation 1.
+\par
+
+
 
 \section*{The Doppler Wobble Method of extra-solar planets}
 \par
@@ -162,37 +200,6 @@ and $T$.
   
 
 
-
-
-
-\section*{Method}
-For the Doppler Wobble method it was first necessary to 
-import all the data provided into a directory that could be 
-accessed by the code source files. From here it was possible to start
-writing the Python script that would take the data and produce the required 
-outputs as outlined in the aims above.
-
-
-
-
-\section*{Results}
-For doppler wobble method 1.1 result is graph. \par
-1.2 radial velocity of both stars on all dates\par
-1.3 plot radial velocity as a function of time, calculate the phase
-of each star and plot the radial velocity as a function of phase\par
-1.4 calculate values of v$_{mean}$ v$_{s}$ and $\phi_{max}$ and determine errors,
-for both stars\par
-1.5 calculate the mass of each planet and the semi-major axis of each planet 
-with errors\par
-
-
-
-\section*{Analysis}
-
-
-
-
-
 % All relevant sections for Planetary transits method
 \newpage
 \section*{Introduction and Background}
@@ -216,4 +223,24 @@ during the transit and non-transit phase. Hence estimate the radius of the plane
 \section*{Conclusion}
 
 \section*{References}
+
+[1] {1992Natur.355..145W,
+       author = {{Wolszczan}, A. and {Frail}, D.~A.},
+        title = "{A planetary system around the millisecond pulsar PSR1257 + 12}",
+      journal = {nat},
+     keywords = {Binary Stars, Extrasolar Planets, Orbital Mechanics, Planetary Systems, Pulsars, Accretion Disks, Least Squares Method, Neutron Stars, Radio Astronomy, Supernova Remnants, Astrophysics},
+         year = 1992,
+        month = jan,
+       volume = {355},
+       number = {6356},
+        pages = {145-147},
+          doi = {10.1038/355145a0},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/1992Natur.355..145W},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+
+      
+}
+
+[2] Mayor, M., Queloz, D. A Jupiter-mass companion to a solar-type star. Nature 378, 355–359 (1995). https://doi.org/10.1038/378355a0
+
 \end{document}
