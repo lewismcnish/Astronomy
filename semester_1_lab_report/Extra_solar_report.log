@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Homebrew) (preloaded format=pdflatex 2022.11.23)  15 JAN 2023 00:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Homebrew) (preloaded format=pdflatex 2022.11.23)  15 JAN 2023 12:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -298,19 +298,22 @@ Overfull \hbox (49.69592pt too wide) in paragraph at lines 115--125
  [] 
  []
 
-[3 <./images/HD-28185_phase.png> <./images/HD-73256_phase.png>] [4
 
-] (./Extra_solar_report.aux) ) 
+Overfull \hbox (58.4434pt too wide) in paragraph at lines 151--159
+ [] 
+ []
+
+[3 <./images/HD-28185_phase.png> <./images/HD-73256_phase.png>] [4] (./Extra_solar_report.aux) ) 
 Here is how much of TeX's memory you used:
- 3575 strings out of 478268
- 56188 string characters out of 5835365
- 352087 words of memory out of 5000000
- 21746 multiletter control sequences out of 15000+600000
+ 3576 strings out of 478268
+ 56200 string characters out of 5835365
+ 355095 words of memory out of 5000000
+ 21747 multiletter control sequences out of 15000+600000
  477774 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,10n,62p,302b,230s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on Extra_solar_report.pdf (4 pages, 207621 bytes).
+Output written on Extra_solar_report.pdf (4 pages, 211758 bytes).
 PDF statistics:
  81 PDF objects out of 1000 (max. 8388607)
  44 compressed objects within 1 object stream

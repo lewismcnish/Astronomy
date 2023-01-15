@@ -105,7 +105,7 @@ phase when the radial velocity curve is at a maximum $\phi_{max}$ of the stars.
 As well as the associated covariance matrix uncertainties for each of these values.
 \par
 For the stars (HD-28185 and HD-73256) the values obtained for $v_{mean}$, $v_{s}$ 
-and $\phi_{max}$ 
+and $\phi_{max}$ were.
 
 
 \begin{table}[h!]
@@ -125,9 +125,41 @@ and $\phi_{max}$
     \end{center}
   \end{table}
 
-  Values of $\phi_{max}$ are dimensionless in this instance as they are
-  fractions of the orbital periods.
+Values of $\phi_{max}$ are dimensionless in this instance as they are
+fractions of the orbital periods.
+\par
+Now that values for $v_{mean}$, $v_{s}$ and $\phi_{max}$ of both stars have 
+been calculated, it was possible to determine the mass and semi-major axis of the
+extra-solar planets in orbit around the stars (HD-28185 and HD-73256).
+The mass of the planets was calculated using %equation 1 from the lab script.
+where the mass of the planet $m_p $ is dependent on the amplitude of the radial 
+velocity curve $v_{s}$, the mass of the star $M_s$ and the period of the orbit of the planet $T$.
+As the mass of the parent star had not been calculated previously it was necessary to
+make an educated assumption of what this mass might be. Therefore based on the idea 
+that these stars share similar properties to the sun it was assumed that the mass of
+the parent stars was $M_s = 1.0M_{\odot}$. Then using %equation 3 from the lab script
+it was possible to calculate the semi-major axis of the planets in orbit around the
+stars (HD-28185 and HD-73256). The values for the mass and semi-major axis of the 
+relevant planets around each star are shown in table 2, with the associated 
+uncertainties progated from the uncertainties in the values of $v_{mean}$, $v_{s}$
+and $T$.
 
+\begin{table}[h!]
+    \begin{center}
+      \caption{Mass and semi-major axis of planets in orbit around stars HD-28185 and HD-73256.}
+      \label{tab:table2}
+      \begin{tabular}{c|c|c}
+         & {HD-28185} & {HD-73256} \\
+        \hline
+        $m_p$ & $1.7654\pm0.1089\times10^{25}kg$ & $1.0517\pm0.0413\times10^{26}kg$ \\
+        \hline
+        $a$ & $2.2756\pm0.1365\times10^{6}m$ & $2.5446\pm0.1018\times10^{7}m$\\
+        
+      \end{tabular}
+    \end{center}
+  \end{table}
+  \par
+  
 
 
 
