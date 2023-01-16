@@ -47,7 +47,7 @@ planets and the semi-major axis of their orbits to be calculated.
 However, for the Planetary transits method, only one star is considered
 and to determine the relevant characteristics of the extra-solar planets,
 the magnitude of the I-band of the star is measured as a function
-of time, and creating a phase-folded light curve.
+of time creating a phase-folded light curve.
   
 
 
@@ -89,7 +89,7 @@ calculated using Kepler's third law as seen in equation 2.$^4$
 \begin{equation}\label{eq:semi-major axis eq}
   G(M_s+m_p) = \frac{4\pi^2a^3}{T^2}
 \end{equation}
-where $a$ is the semi-major axis of the orbit, $G$ is the unviversal gravitational
+where $a$ is the semi-major axis of the orbit,
 and the rest of the variables are the same as in equation 1.
 \par
 
@@ -98,15 +98,15 @@ and the rest of the variables are the same as in equation 1.
 \section*{The Doppler Wobble Method of Detecting Extra-solar Planets}
 \par
 For the analysis on data of two stars and the existence of an extra-solar planets 
-around them, the doppler wobble method was used. This method is based on measuring the 
+around them, the Doppler Wobble method was used. This method is based on measuring the 
 radial velocity of the stars (HD-28185 and HD-73256) as they move towards and away from 
 the observer. Thus
-producing a doppler shift in the light emitted from the stars, that can be used to 
+producing a Doppler shift in the light emitted from the stars that can be used to 
 determine the velocity of the stars in the plane of the observer's line of sight. 
 \par
 To determine the radial velocity, observations were made of the stars on different
 Julian dates, recording the wavelength of light emitted as well as the observed intensity 
-of the light. The radial velocity of the stars can then be calculated using the doppler
+of the light. The radial velocity of the stars can then be calculated using the Doppler
 shifted wavelength and intensity, as provided in the Python Library.$^4$ 
 \begin{equation}\label{eq:wavelength doppler}\lambda_{obs} = \lambda_{emit}{(1+v/c)}
 \end{equation}
@@ -118,7 +118,7 @@ emitted wavelength, $I_{obs}$ is the observed intensity, $I_{emit}$ is the emitt
 intensity, $v$ is the radial velocity of the stars and $c$ is the speed of light.
 From this it was possible to calculate the radial velocity of each star on each date.
 This was done using the Python SCIPY library.$^5$ An uncertainty in the radial velocity
-was assigned to each date of each star of $\pm 15 ms^-1$.$^3$
+was assigned to each date of each star of $\pm 15 ms^-1$.$^4$
 \par
 
 \begin{figure}[h]
@@ -192,10 +192,10 @@ By using the data calculated so far in this report it was possible to now calcul
 the mean radial velocity $v_{mean} $, the amplitude of the (RVC)
  $v_{s}$ and the 
 phase when the RVC is at a maximum $\phi_{max}$ of the stars.
-As well as the associated covariance matrix uncertainties for each of these values.
+As well as the associated covariance matrix$^5$ uncertainties for each of these values.
 \par
 For the stars (HD-28185 and HD-73256) the values obtained for $v_{mean}$, $v_{s}$ 
-and $\phi_{max}$ were.
+and $\phi_{max}$ are shown in Table 1 above.
 
 
 
@@ -214,7 +214,7 @@ As the mass of the parent star had not been calculated previously it was necessa
 make an educated assumption of what this mass might be. Therefore based on the idea 
 that these stars share similar properties to the sun it was assumed that the mass of
 the parent stars was $M_s = 1.0M_{\odot}$. Then by rearrangin equation 2 we can 
-obtain an equation for a the semi-major axis.
+obtain an equation for ($a$) the semi-major axis.
 \begin{equation}
   a = \left(\frac{G(M_s+m_p)T^2}{4\pi^2}\right)^{1/3}
   \end{equation}
@@ -229,7 +229,7 @@ and $T$.
   
 \section*{Conclusion}
 From the data collected it is possible to determine that the 
-accuracy of the Doppler wobble method is effective at detecting 
+accuracy of the Doppler Wobble method is effective at detecting 
 extra-solar planets, as, when comparing the two stars (HD-28185 and HD-73256)
 with similar masses, their respective planets have 
 similar masses and semi-major axis of orbit, giving rise to the 
@@ -241,7 +241,7 @@ that a planet with a similar mass will be in orbit around it.
 % All relevant sections for Planetary transits method
 
 \section*{Introduction and Background}
-Searching for Extra-solar planets can be difficult however, 
+Searching for Extra-solar planets can be difficult, however, 
 those orbiting along the plane of the observer can be 
 detected using the method of Planetary Transits (PLT).
 This method relies on observing the flux from a star and the 
@@ -261,7 +261,7 @@ The Method of Planetary Transits for detecting extra-solar planets
 around stars first requires
 the magnitude of light from (in this case) the I-band of 
 the star to be measured over some period of time.
-By plotting the this magnitude of I-band light as a 
+By plotting the magnitude of I-band light as a 
 function of the phase of the planetary orbit, it is 
 possible to observe a significant reduction in the 
 magnitude for a short period of time. And thus this can be 
@@ -290,9 +290,9 @@ was necessary to limit the graph to the area of interest
 Now that a phase-folded light curve has been obtained,
 it is possible to start calculating certain properties
 about the Extra-solar Planet that has been detected.
-THe first of these properties is the semi-major axis
-of the orbit of the planet. This was calculated using the 
-Kepler's Third law of Planetary motion as seen below.
+The first of these properties is the semi-major axis
+of the orbit of the planet. This was calculated using
+Kepler's Third law of Planetary motion$^4$ as seen below.
 
 \begin{equation}
   G(M_s+m_p) = \frac{4\pi^2a^3}{T^2} \tag{\ref{eq:semi-major axis eq}}
@@ -336,7 +336,7 @@ Then by using equation
   r_s = \frac{0.071C}{2}
   \end{equation}
 where $r_s$ is the radius of the star, $C$ is the circumference of the orbit
-thus radius of the star is $2.3949\pm0.0399\times10^7m $.
+the radius of the star is $2.3949\pm0.0399\times10^7m $.
 \par
 Finally the radius of the planet can be calculated, this is 
 simalar to how the radius of the star was calculated but 
@@ -345,7 +345,7 @@ position $\phi_1$ and when the planet fully eclipses the star
 at $\phi_2$ as shown in Figure 5.
 From Figure 4 it was taken that the planet began eclipsing at 0.545 phase
 and was fully eclipsing at a phase of 0.553 thus giving a fraction 
-of the orbital circumference equal to the diameter of the planet.
+of the orbital circumference equal to the diameter of the planet (0.08).
 using equation \ref{eq: radius of star eq} where the 0.071 is changed 
 to 0.08 the diameter of the planet can be found to be $5.3986\pm 0.0900\times10^6m $
 \section*{Conclusion}
@@ -381,22 +381,24 @@ uncertainty in the derived values.
           doi = {10.1038/355145a0},
        adsurl = {https://ui.adsabs.harvard.edu/abs/1992Natur.355..145W},
       adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+      date-accessed 14/01/23
 
       
 }\parskip 0.2cm
 \noindent
 [2] Mayor, M., Queloz, D. A Jupiter-mass companion to a solar-type star. Nature 378, 355–359 (1995)
-. https://doi.org/10.1038/378355a0\parskip 0.2cm
+. https://doi.org/10.1038/378355a0
+date-accessed 15/01/23 \parskip 0.2cm
 
 
 
 \noindent 
-[3] 2022 Extra-solar Planets Lab Record, L. McNish\parskip 0.2cm
+[3] 2022 Extra-solar Planets Lab Record, L. McNish date-accessed 16/01/23\parskip 0.2cm
 
 
 \noindent
 [4] School of Physics and Astrophysics - University of Glasgow, 
-Detecting Extrasolar Planets, Astronomy 2 Lab Script, 2022-2023, 9th November 2022\parskip 0.2cm
+Detecting Extrasolar Planets, Astronomy 2 Lab Script, 2022-2023, 9th November 2022 date-accessed 15/01/23\parskip 0.2cm
 
 \noindent
 [5] {2020 SciPy-NMeth,
@@ -421,5 +423,6 @@ Detecting Extrasolar Planets, Astronomy 2 Lab Script, 2022-2023, 9th November 20
   pages   = {261--272},
   adsurl  = {https://rdcu.be/b08Wh},
   doi     = {10.1038/s41592-019-0686-2},
+  date-accessed 15/01/23
 }
 \end{document}

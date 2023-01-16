@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Homebrew) (preloaded format=pdflatex 2022.11.23)  16 JAN 2023 20:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Homebrew) (preloaded format=pdflatex 2022.11.23)  16 JAN 2023 21:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -322,6 +322,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 145--147
 [][]
  []
 
+
+Overfull \hbox (0.50922pt too wide) in paragraph at lines 197--199
+\OT1/cmr/m/n/10 val-ues ob-tained for $\OML/cmm/m/it/10 v[]$\OT1/cmr/m/n/10 , $\OML/cmm/m/it/10 v[]$ \OT1/cmr/m/n/10 and $\OML/cmm/m/it/10 ^^^[]$ \OT1/cmr/m/n/10 are shown
+ []
+
 [3 <./images/HD-28185_init.png> <./images/HD-73256_init.png> <./images/HD-28185_phase.png> <./images/HD-73256_phase.png>] [4]
 Overfull \hbox (3.83746pt too wide) in paragraph at lines 259--259
 []\OT1/cmr/bx/n/14.4 The Plan-e-tary Tran-sit Method
@@ -371,13 +376,13 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  3677 strings out of 478268
  58293 string characters out of 5835365
- 357968 words of memory out of 5000000
+ 356968 words of memory out of 5000000
  21841 multiletter control sequences out of 15000+600000
  477774 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,10n,62p,323b,234s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on Extra_solar_report.pdf (7 pages, 370982 bytes).
+Output written on Extra_solar_report.pdf (7 pages, 371159 bytes).
 PDF statistics:
  103 PDF objects out of 1000 (max. 8388607)
  55 compressed objects within 1 object stream
