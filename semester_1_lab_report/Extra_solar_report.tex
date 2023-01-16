@@ -38,13 +38,13 @@ In this report, the search for extra-solar planets is discussed,
 with emphasis on using the Doppler Wobble and Planetary Transits 
 methods to identify extra-solar planets and their key features, 
 such as the mass of the planet and the semi-major axis of its orbit.
-These methods are particular effective when observing planets who's orbits 
+These methods are effective when observing planets who's orbits 
 are close to the plane of the observer's line of sight. For the Doppler 
 Wobble method two stars are considered who are known to have
 extra-solar planets in orbit around them. The radial velocity of 
 the parents stars are measured and thus allowing the mass of the 
 planets and the semi-major axis of their orbits to be calculated.
-However for the Planetary transits method, only one star is considered
+However, for the Planetary transits method, only one star is considered
 and to determine the relevant characteristics of the extra-solar planets,
 the magnitude of the I-band of the star is measured as a function
 of time, and creating a phase-folded light curve.
@@ -70,12 +70,12 @@ from this, a pattern can be seen where, when the star is moving towards the obse
 the wavelength of the light emitted is shifted towards the blue end of the 
 Electromagnetic spectrum 
 (resulting in a lower wavelength) and when the star is moving away from the observer
-an increase in wavelength is observed (redshift). 
+an increase in wavelength is observed (redshift).$^3$
 \par
 By measuring the wavelength and intensity and thus the radial velocity of a star as 
 a function of time, it is possible to determine characteristics about the Planetary
 companions in orbit such as the mass of the planet using Kepler's third law and Newton's
-law of Unviersal Gravitation, an equation can derived as seen in equation 1.$^3$
+law of Unviersal Gravitation, an equation can derived as seen in equation 1.$^4$
 \begin{equation}\label{eq:mass of planet eq}
   v_s = \left(\frac{2\pi G}{T}\right)^{1/3}M_s^{-2/3}m_p
 \end{equation}
@@ -84,7 +84,7 @@ gravitational constant, $T$ is the orbital period of the planet, $M_s$ is the ma
 the star and $m_p$ is the mass of the planet.
 \par
 From the mass of the planet the semi-major axis of the orbit of the planet can be 
-calculated using Kepler's third law as seen in equation 2.$^3$
+calculated using Kepler's third law as seen in equation 2.$^4$
 
 \begin{equation}\label{eq:semi-major axis eq}
   G(M_s+m_p) = \frac{4\pi^2a^3}{T^2}
@@ -107,7 +107,7 @@ determine the velocity of the stars in the plane of the observer's line of sight
 To determine the radial velocity, observations were made of the stars on different
 Julian dates, recording the wavelength of light emitted as well as the observed intensity 
 of the light. The radial velocity of the stars can then be calculated using the doppler
-shifted wavelength and intensity, as provided in the Python Library.$^3$ 
+shifted wavelength and intensity, as provided in the Python Library.$^4$ 
 \begin{equation}\label{eq:wavelength doppler}\lambda_{obs} = \lambda_{emit}{(1+v/c)}
 \end{equation}
 
@@ -117,7 +117,7 @@ where $\lambda_{obs}$ is the observed wavelength, $\lambda_{emit}$ is the
 emitted wavelength, $I_{obs}$ is the observed intensity, $I_{emit}$ is the emitted 
 intensity, $v$ is the radial velocity of the stars and $c$ is the speed of light.
 From this it was possible to calculate the radial velocity of each star on each date.
-This was done using the Python SCIPY library.$^4$ An uncertainty in the radial velocity
+This was done using the Python SCIPY library.$^5$ An uncertainty in the radial velocity
 was assigned to each date of each star of $\pm 15 ms^-1$.$^3$
 \par
 
@@ -266,7 +266,7 @@ function of the phase of the planetary orbit, it is
 possible to observe a significant reduction in the 
 magnitude for a short period of time. And thus this can be 
 deduced to be the transit of a satellite around the star.
-For the star being measured in this report (OGLE-III-TR56)
+For the star being measured in this report (OGLE-III-TR56)$^4$
 the magnitude of light was measured over one orbit of the 
 planet (one phase) and the results are shown in Figure 3
 
@@ -322,7 +322,7 @@ This gives a value of $6.7460\pm0.1125 \times10^{8}m $
 for the circumference of orbit. Now by comparing the fraction 
 of the orbital circumference that the planet covers in one orbit, 
 the diameter of the star can be calculated by extrapolating 
-lines on the graph in Figure 4 like shown in Figure 5. 
+lines on the graph in Figure 4 like shown in Figure 5.$^4$ 
 
 \begin{figure}[h]
   \includegraphics[width=7cm]{images/planet transit of star.png}
@@ -349,6 +349,20 @@ of the orbital circumference equal to the diameter of the planet.
 using equation \ref{eq: radius of star eq} where the 0.071 is changed 
 to 0.08 the diameter of the planet can be found to be $5.3986\pm 0.0900\times10^6m $
 \section*{Conclusion}
+
+The Planetary Transits method for detecting extra-solar planets
+is an effective method for the initial detection of a planet
+assuming that the telescope used has a high enough resolution,  
+as the stars intensity as a planet is in transit is reduced by a
+significant amount. However, this method appears to be limited due 
+to the difficulty of obtaining accurate data from the light curve, 
+as from observation it is difficult to determine the exact point 
+at which a planet begins to eclipse resulting in a relatively high
+uncertainty in the derived values.
+
+
+
+
 \newpage
 \onecolumn
 \section*{References}
@@ -374,12 +388,18 @@ to 0.08 the diameter of the planet can be found to be $5.3986\pm 0.0900\times10^
 [2] Mayor, M., Queloz, D. A Jupiter-mass companion to a solar-type star. Nature 378, 355–359 (1995)
 . https://doi.org/10.1038/378355a0\parskip 0.2cm
 
+
+
+\noindent 
+[3] 2022 Extra-solar Planets Lab Record, Lewis McNish\parskip 0.2cm
+
+
 \noindent
-[3] School of Physics and Astrophysics - University of Glasgow, 
+[4] School of Physics and Astrophysics - University of Glasgow, 
 Detecting Extrasolar Planets, Astronomy 2 Lab Script, 2022-2023, 9th November 2022\parskip 0.2cm
 
 \noindent
-[4] {2020 SciPy-NMeth,
+[5] {2020 SciPy-NMeth,
   author  = {Virtanen, Pauli and Gommers, Ralf and Oliphant, Travis E. and
             Haberland, Matt and Reddy, Tyler and Cournapeau, David and
             Burovski, Evgeni and Peterson, Pearu and Weckesser, Warren and
