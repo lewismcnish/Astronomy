@@ -12,7 +12,6 @@
 \usepackage{tabularx}
 \usepackage{multirow}
 \usepackage{booktabs}
-\usepackage[style=phys]{biblatex}
 
 
 %list of images
@@ -49,7 +48,7 @@ The search for extra-solar planets has been a growing field of Astronomy for the
 past 30 years since the first extra-solar planet was discovered in 1992, this 
 detection was made indirectly by observing gaps in a pulsars emission of radio waves.$^1 $
 However it wasnt until 1995 that the first direct detection of an extra-solar planet 
-via the radial velocity method was made. This method is based on measuring the 
+via the radial velocity method was made.$^2$ This method is based on measuring the 
 wavelength and intensity of light emitted from a star over a period of time, 
 from this, a pattern can be seen where when the star is moving towards the observer
 the wavelength of the light emitted is shifted towards the blue end of the 
@@ -60,7 +59,7 @@ an increase in wavelength is observed (redshift).
 By measuring the wavelength and intensity and thus the radial velocity of a star as 
 a function of time, it is possible to determine characteristics about the Planetary
 companions in orbit such as the mass of the planet using Kepler's third law and Newton's
-law of Unviersal Gravitation, an equation can derived as seen in equation 1.
+law of Unviersal Gravitation, an equation can derived as seen in equation 1.$^3$
 \begin{equation}\label{eq:mass of planet eq}
   v_s = \left(\frac{2\pi G}{T}\right)^{1/3}M_s^{-2/3}m_p
 \end{equation}
@@ -69,7 +68,7 @@ gravitational constant, $T$ is the orbital period of the planet, $M_s$ is the ma
 the star and $m_p$ is the mass of the planet.
 \par
 From the mass of the planet the semi-major axis of the orbit of the planet can be 
-calculated using Kepler's third law as seen in equation 2.
+calculated using Kepler's third law as seen in equation 2.$^3$
 
 \begin{equation}\label{eq:semi-major axis eq}
   G(M_s+m_p) = \frac{4\pi^2a^3}{T^2}
@@ -92,7 +91,7 @@ determine the velocity of the stars in the plane of the observer's line of sight
 To determine the radial velocity, observations were made of the stars on different
 Julian dates, recording the wavelength of light emitted as well as the observed intensity 
 of the light. The radial velocity of the stars can then be calculated using the doppler
-shifted wavelength and intensity, as provided in the Python Library.$^1$ 
+shifted wavelength and intensity, as provided in the Python Library.$^3$ 
 \begin{equation}\label{eq:wavelength doppler}\lambda_{obs} = \lambda_{emit}{(1+v/c)}
 \end{equation}
 
@@ -102,8 +101,8 @@ where $\lambda_{obs}$ is the observed wavelength, $\lambda_{emit}$ is the
 emitted wavelength, $I_{obs}$ is the observed intensity, $I_{emit}$ is the emitted 
 intensity, $v$ is the radial velocity of the stars and $c$ is the speed of light.
 From this it was possible to calculate the radial velocity of each star on each date.
-This was done using the Python SCIPY library.$^2$ An uncertainty in the radial velocity
-was assigned to each date of each star of $\pm 15 ms^-1$.$^1$
+This was done using the Python SCIPY library.$^4$ An uncertainty in the radial velocity
+was assigned to each date of each star of $\pm 15 ms^-1$.$^3$
 \par
 
 \begin{figure}[h]
@@ -137,16 +136,16 @@ Now that there was a clear correlation between the radial velocity of the stars 
 time, it was possible to calculate characteristics about the extra-solar planets in 
 orbit around the stars (HD-28185 and HD-73256) using %equation 2 from lab script. 
 By using the data calculated so far in this report it was possible to now calculate 
-the mean radial velocity $v_{mean} $, the amplitude of the radial velocity curve
+the mean radial velocity $v_{mean} $, the amplitude of the (RVC)
  $v_{s}$ and the 
-phase when the radial velocity curve is at a maximum $\phi_{max}$ of the stars.
+phase when the RVC is at a maximum $\phi_{max}$ of the stars.
 As well as the associated covariance matrix uncertainties for each of these values.
 \par
 For the stars (HD-28185 and HD-73256) the values obtained for $v_{mean}$, $v_{s}$ 
 and $\phi_{max}$ were.
 
 
-\begin{table}[h!]
+\begin{table*}[t]
     \begin{center}
       \caption{Radial velocities and Phase of stars HD-28185 and HD-73256.}
       \label{tab:table1}
@@ -161,28 +160,8 @@ and $\phi_{max}$ were.
         
       \end{tabular}
     \end{center}
-  \end{table}
-
-Values of $\phi_{max}$ are dimensionless in this instance as they are
-fractions of the orbital periods.
-\par
-Now that values for $v_{mean}$, $v_{s}$ and $\phi_{max}$ of both stars have 
-been calculated, it was possible to determine the mass and semi-major axis of the
-extra-solar planets in orbit around the stars (HD-28185 and HD-73256).
-The mass of the planets was calculated using %equation 1 from the lab script.
-where the mass of the planet $m_p $ is dependent on the amplitude of the radial 
-velocity curve $v_{s}$, the mass of the star $M_s$ and the period of the orbit of the planet $T$.
-As the mass of the parent star had not been calculated previously it was necessary to
-make an educated assumption of what this mass might be. Therefore based on the idea 
-that these stars share similar properties to the sun it was assumed that the mass of
-the parent stars was $M_s = 1.0M_{\odot}$. Then using %equation 3 from the lab script
-it was possible to calculate the semi-major axis of the planets in orbit around the
-stars (HD-28185 and HD-73256). The values for the mass and semi-major axis of the 
-relevant planets around each star are shown in table 2, with the associated 
-uncertainties progated from the uncertainties in the values of $v_{mean}$, $v_{s}$
-and $T$.
-
-\begin{table}[h!]
+  \end{table*}
+\begin{table*}[t]
     \begin{center}
       \caption{Mass and semi-major axis of planets in orbit around stars HD-28185 and HD-73256.}
       \label{tab:table2}
@@ -195,7 +174,26 @@ and $T$.
         
       \end{tabular}
     \end{center}
-  \end{table}
+  \end{table*}
+Values of $\phi_{max}$ are dimensionless in this instance as they are
+fractions of the orbital periods.
+\par
+Now that values for $v_{mean}$, $v_{s}$ and $\phi_{max}$ of both stars have 
+been calculated, it was possible to determine the mass and semi-major axis of the
+extra-solar planets in orbit around the stars (HD-28185 and HD-73256).
+The mass of the planets was calculated using %equation 1 from the lab script.
+where the mass of the planet $m_p $ is dependent on the amplitude of the RVC $v_{s}$, the mass of the star $M_s$ and the period of the orbit of the planet $T$.
+As the mass of the parent star had not been calculated previously it was necessary to
+make an educated assumption of what this mass might be. Therefore based on the idea 
+that these stars share similar properties to the sun it was assumed that the mass of
+the parent stars was $M_s = 1.0M_{\odot}$. Then using %equation 3 from the lab script
+it was possible to calculate the semi-major axis of the planets in orbit around the
+stars (HD-28185 and HD-73256). The values for the mass and semi-major axis of the 
+relevant planets around each star are shown in table 2, with the associated 
+uncertainties progated from the uncertainties in the values of $v_{mean}$, $v_{s}$
+and $T$.
+
+
   \par
   
 
@@ -223,6 +221,7 @@ during the transit and non-transit phase. Hence estimate the radius of the plane
 \section*{Conclusion}
 
 \section*{References}
+\newpage
 
 [1] {1992Natur.355..145W,
        author = {{Wolszczan}, A. and {Frail}, D.~A.},
@@ -239,8 +238,37 @@ during the transit and non-transit phase. Hence estimate the radius of the plane
       adsnote = {Provided by the SAO/NASA Astrophysics Data System}
 
       
+}\parskip 0.2cm
+\noindent
+[2] Mayor, M., Queloz, D. A Jupiter-mass companion to a solar-type star. Nature 378, 355–359 (1995)
+. https://doi.org/10.1038/378355a0\parskip 0.2cm
+
+\noindent
+[3] School of Physics and Astrophysics - University of Glasgow, 
+Detecting Extrasolar Planets, Astronomy 2 Lab Script, 2022-2023, 9th November 2022\parskip 0.2cm
+
+\noindent
+[4]{2020SciPy-NMeth,
+  author  = {Virtanen, Pauli and Gommers, Ralf and Oliphant, Travis E. and
+            Haberland, Matt and Reddy, Tyler and Cournapeau, David and
+            Burovski, Evgeni and Peterson, Pearu and Weckesser, Warren and
+            Bright, Jonathan and {van der Walt}, St{\'e}fan J. and
+            Brett, Matthew and Wilson, Joshua and Millman, K. Jarrod and
+            Mayorov, Nikolay and Nelson, Andrew R. J. and Jones, Eric and
+            Kern, Robert and Larson, Eric and Carey, C J and
+            Polat, {\.I}lhan and Feng, Yu and Moore, Eric W. and
+            {VanderPlas}, Jake and Laxalde, Denis and Perktold, Josef and
+            Cimrman, Robert and Henriksen, Ian and Quintero, E. A. and
+            Harris, Charles R. and Archibald, Anne M. and
+            Ribeiro, Ant{\^o}nio H. and Pedregosa, Fabian and
+            {van Mulbregt}, Paul and {SciPy 1.0 Contributors}},
+  title   = {{{SciPy} 1.0: Fundamental Algorithms for Scientific
+            Computing in Python}},
+  journal = {Nature Methods},
+  year    = {2020},
+  volume  = {17},
+  pages   = {261--272},
+  adsurl  = {https://rdcu.be/b08Wh},
+  doi     = {10.1038/s41592-019-0686-2},
 }
-
-[2] Mayor, M., Queloz, D. A Jupiter-mass companion to a solar-type star. Nature 378, 355–359 (1995). https://doi.org/10.1038/378355a0
-
 \end{document}

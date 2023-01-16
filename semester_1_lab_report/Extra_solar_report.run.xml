@@ -82,5 +82,8 @@
     <requires type="dynamic">
       <file>Extra_solar_report.bcf</file>
     </requires>
+    <requires type="editable">
+      <file>references.bib</file>
+    </requires>
   </external>
 </requests>
