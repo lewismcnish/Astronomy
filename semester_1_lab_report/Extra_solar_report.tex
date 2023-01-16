@@ -34,7 +34,23 @@ the Doppler Wobble and Planetary Transits Methods}}
 \maketitle
 
 \begin{abstract}
-This is the abstract
+In this report, the search for extra-solar planets is discussed,
+with emphasis on using the Doppler Wobble and Planetary Transits 
+methods to identify extra-solar planets and their key features, 
+such as the mass of the planet and the semi-major axis of its orbit.
+These methods are particular effective when observing planets who's orbits 
+are close to the plane of the observer's line of sight. For the Doppler 
+Wobble method two stars are considered who are known to have
+extra-solar planets in orbit around them. The radial velocity of 
+the parents stars are measured and thus allowing the mass of the 
+planets and the semi-major axis of their orbits to be calculated.
+However for the Planetary transits method, only one star is considered
+and to determine the relevant characteristics of the extra-solar planets,
+the magnitude of the I-band of the star is measured as a function
+of time, and creating a phase-folded light curve.
+  
+
+
 
 \end{abstract}
 \newpage
@@ -50,7 +66,7 @@ detection was made indirectly by observing gaps in a pulsars emission of radio w
 However it wasnt until 1995 that the first direct detection of an extra-solar planet 
 via the radial velocity method was made.$^2$ This method is based on measuring the 
 wavelength and intensity of light emitted from a star over a period of time, 
-from this, a pattern can be seen where when the star is moving towards the observer
+from this, a pattern can be seen where, when the star is moving towards the observer
 the wavelength of the light emitted is shifted towards the blue end of the 
 Electromagnetic spectrum 
 (resulting in a lower wavelength) and when the star is moving away from the observer
@@ -211,14 +227,38 @@ and $T$.
 
   \par
   
+\section*{Conclusion}
+From the data collected it is possible to determine that the 
+accuracy of the Doppler wobble method is effective at detecting 
+extra-solar planets, as, when comparing the two stars (HD-28185 and HD-73256)
+with similar masses, their respective planets have 
+similar masses and semi-major axis of orbit, giving rise to the 
+idea that for a star with a particular mass there is a likely chance
+that a planet with a similar mass will be in orbit around it.
+\par
 
 
 % All relevant sections for Planetary transits method
 
 \section*{Introduction and Background}
+Searching for Extra-solar planets can be difficult however, 
+those orbiting along the plane of the observer can be 
+detected using the method of Planetary Transits (PLT).
+This method relies on observing the flux from a star and the 
+reduction that can be seen when a planet partially blocks some 
+area of the star, this reduction in Flux is known as a transit.
+However one of the drawbacks of this method is that it relies on 
+a telescope with a relatively high angular resolution. 
+From this method we can determine the semi-major axis of the planets
+orbit and from this the circumference of orbit, the radius of the star
+and the radius of the planet.
+\par
+
+
 
 \section*{The Planetary Transit Method for Detecting Extra-solar Planets}
-The Method of Planetary Transits of star first requires
+The Method of Planetary Transits for detecting extra-solar planets
+around stars first requires
 the magnitude of light from (in this case) the I-band of 
 the star to be measured over some period of time.
 By plotting the this magnitude of I-band light as a 
@@ -235,7 +275,7 @@ planet (one phase) and the results are shown in Figure 3
   \caption{I-band light as a function of phase for star OGLE-III-TR56}
   \label{fig:HD-_init}
   \end{figure}
-\newpage
+
 To be able to take more accurate data from this graph, it
 was necessary to limit the graph to the area of interest 
 (the dip in magnitude) as can be seen in Figure 4.
@@ -261,7 +301,7 @@ As the star that we are observing is roughly equivalent to 1
 solar mass ($1M_\odot $) and other similar characteristics it is reasonable 
 to assume that the mass of the planet is equal to 
 the mass of the earth and therefore is negligible compared to 
-the mass of the star and therefore can be omitted. 
+the mass of the star and can be omitted. 
 Rearranging equation 2 for $a$ the semi-major axis
 gives us:
 
@@ -270,16 +310,51 @@ gives us:
   \end{equation}
 where $G$ is the gravitational constant, $M_\odot$ is the mass of the star,
 and $T$ is the period of the orbit of the planet.
+From this we can obtain \newline$1.0737\pm0.0179\times10^{8}m $
+for the semi-major axis of orbit ($a$).
+\par
+The next property to calculate was the radius of the planet,
+however in order to do this, it was first necessary to calculate 
+the circumference of the orbit, which can be done when assuming 
+that the orbit is circular and therefore the circumference is 
+equal to $2\pi r $, where $r$ is the radius of the orbit.
+This gives a value of $6.7460\pm0.1125 \times10^{8}m $
+for the circumference of orbit. Now by comparing the fraction 
+of the orbital circumference that the planet covers in one orbit, 
+the diameter of the star can be calculated by extrapolating 
+lines on the graph in Figure 4 like shown in Figure 5. 
 
+\begin{figure}[h]
+  \includegraphics[width=7cm]{images/planet transit of star.png}
+  \caption{$\phi_1 $ and $\phi_4$ show where the planet intially covers
+   the star as in position 1 and 4 on the left}
+  \label{fig:HD-_init}
+  \end{figure}
 
-
+Then by using equation 
+\begin{equation}\label{eq: radius of star eq}
+  r_s = \frac{0.071C}{2}
+  \end{equation}
+where $r_s$ is the radius of the star, $C$ is the circumference of the orbit
+thus radius of the star is $2.3949\pm0.0399\times10^7m $.
+\par
+Finally the radius of the planet can be calculated, this is 
+simalar to how the radius of the star was calculated but 
+by using when the planet starts to eclipses the star as shown by 
+position $\phi_1$ and when the planet fully eclipses the star
+at $\phi_2$ as shown in Figure 5.
+From Figure 4 it was taken that the planet began eclipsing at 0.545 phase
+and was fully eclipsing at a phase of 0.553 thus giving a fraction 
+of the orbital circumference equal to the diameter of the planet.
+using equation \ref{eq: radius of star eq} where the 0.071 is changed 
+to 0.08 the diameter of the planet can be found to be $5.3986\pm 0.0900\times10^6m $
 \section*{Conclusion}
 \newpage
 \onecolumn
 \section*{References}
 
 \noindent
-[1] {1992Natur.355..145W,
+[1] {1992 Natur.355..145W,
        author = {{Wolszczan}, A. and {Frail}, D.~A.},
         title = "{A planetary system around the millisecond pulsar PSR1257 + 12}",
       journal = {nat},
@@ -304,7 +379,7 @@ and $T$ is the period of the orbit of the planet.
 Detecting Extrasolar Planets, Astronomy 2 Lab Script, 2022-2023, 9th November 2022\parskip 0.2cm
 
 \noindent
-[4] {2020SciPy-NMeth,
+[4] {2020 SciPy-NMeth,
   author  = {Virtanen, Pauli and Gommers, Ralf and Oliphant, Travis E. and
             Haberland, Matt and Reddy, Tyler and Cournapeau, David and
             Burovski, Evgeni and Peterson, Pearu and Weckesser, Warren and
