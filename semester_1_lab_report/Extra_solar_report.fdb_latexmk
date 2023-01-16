@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1673903253 "/Users/lewismcnish/Documents/vscode/Astronomy/semester_1_lab_report/Extra_solar_report.tex" "Extra_solar_report.pdf" "Extra_solar_report" 1673903255
-  "/Users/lewismcnish/Documents/vscode/Astronomy/semester_1_lab_report/Extra_solar_report.tex" 1673903254 18205 c76a5f7910c8d0aeffb62428aa3955f3 ""
+["pdflatex"] 1673903709 "/Users/lewismcnish/Documents/vscode/Astronomy/semester_1_lab_report/Extra_solar_report.tex" "Extra_solar_report.pdf" "Extra_solar_report" 1673903710
+  "/Users/lewismcnish/Documents/vscode/Astronomy/semester_1_lab_report/Extra_solar_report.tex" 1673903709 18205 c76a5f7910c8d0aeffb62428aa3955f3 ""
   "/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/map/fontname/texfonts.map" 1647894602 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map" 1647894602 4385071 4481eb56d8dc7e3e247ed9a139c582cd ""
   "/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1647894602 1004 54797486969f23fa377b128694d548df ""
@@ -70,8 +70,8 @@
   "/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/tex/latex/tools/tabularx.sty" 1647894602 7147 5ac8a9ef36411064b1a501137af0fa54 ""
   "/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/web2c/texmf.cnf" 1647894602 40174 4e2f94c7b252db2ad3c0cfdef6912ab3 ""
   "/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-var/web2c/pdftex/pdflatex.fmt" 1647894602 2826557 3e645ef023e114e50e3f9051cb6a1bbb ""
-  "Extra_solar_report.aux" 1673903254 1742 badc62d6d369cb0d08d410bc8b08c367 "pdflatex"
-  "Extra_solar_report.tex" 1673903254 18205 c76a5f7910c8d0aeffb62428aa3955f3 ""
+  "Extra_solar_report.aux" 1673903710 1742 badc62d6d369cb0d08d410bc8b08c367 "pdflatex"
+  "Extra_solar_report.tex" 1673903709 18205 c76a5f7910c8d0aeffb62428aa3955f3 ""
   "images/HD-28185_init.png" 1673879548 23224 cc1e741e0adbd0dc396e407bd9371639 ""
   "images/HD-28185_phase.png" 1673879586 21988 49a991f43ab65dfa0a448829784b29ed ""
   "images/HD-73256_init.png" 1673879568 22552 5c8167148aeb88bbf14abd5f2608110e ""
