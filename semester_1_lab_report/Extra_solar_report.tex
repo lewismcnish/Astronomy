@@ -134,7 +134,44 @@ observations was more consistent.
 
 Now that there was a clear correlation between the radial velocity of the stars and
 time, it was possible to calculate characteristics about the extra-solar planets in 
-orbit around the stars (HD-28185 and HD-73256) using %equation 2 from lab script. 
+orbit around the stars (HD-28185 and HD-73256) using 
+\begin{equation}\label{eq:lab book eq2}
+  v_{pred} = v_{mean}+v_s\cos[2\pi(\phi_{obs}-\phi_{max})]
+\end{equation}
+
+
+\begin{table*}[t]
+  \begin{center}
+    \caption{Radial velocities and Phase of stars HD-28185 and HD-73256.}
+    \label{tab:table1}
+    \begin{tabular}{c|c|c}
+       & {HD-28185} & {HD-73256} \\
+      \hline
+      $v_{mean} $ & $ 2.18\times10^4 \pm4.00ms^{-1}$ & $1.35\times10^4\pm2.80ms^{-1}$ \\
+      \hline
+      $v_{s}$ & $67.6\pm6.16ms^{-1} $ & $1.20\times10^2\pm3.92ms^{-1}$\\
+      \hline
+      $\phi_{max}$ & $8.59\times10^{-2} \pm 0.01$ & $5.73\times10^{-2}\pm0.01$  \\
+      
+    \end{tabular}
+  \end{center}
+\end{table*}
+\begin{table*}[t]
+  \begin{center}
+    \caption{Mass and semi-major axis of planets in orbit around stars HD-28185 and HD-73256.}
+    \label{tab:table2}
+    \begin{tabular}{c|c|c}
+       & {HD-28185} & {HD-73256} \\
+      \hline
+      $m_p$ & $1.7654\pm0.1089\times10^{25}kg$ & $1.0517\pm0.0413\times10^{26}kg$ \\
+      \hline
+      $a$ & $2.2756\pm0.1365\times10^{6}m$ & $2.5446\pm0.1018\times10^{7}m$\\
+      
+    \end{tabular}
+  \end{center}
+\end{table*}
+
+
 By using the data calculated so far in this report it was possible to now calculate 
 the mean radial velocity $v_{mean} $, the amplitude of the (RVC)
  $v_{s}$ and the 
@@ -145,48 +182,26 @@ For the stars (HD-28185 and HD-73256) the values obtained for $v_{mean}$, $v_{s}
 and $\phi_{max}$ were.
 
 
-\begin{table*}[t]
-    \begin{center}
-      \caption{Radial velocities and Phase of stars HD-28185 and HD-73256.}
-      \label{tab:table1}
-      \begin{tabular}{c|c|c}
-         & {HD-28185} & {HD-73256} \\
-        \hline
-        $v_{mean} $ & $ 2.18\times10^4 \pm4.00ms^{-1}$ & $1.35\times10^4\pm2.80ms^{-1}$ \\
-        \hline
-        $v_{s}$ & $67.6\pm6.16ms^{-1} $ & $1.20\times10^2\pm3.92ms^{-1}$\\
-        \hline
-        $\phi_{max}$ & $8.59\times10^{-2} \pm 0.01$ & $5.73\times10^{-2}\pm0.01$  \\
-        
-      \end{tabular}
-    \end{center}
-  \end{table*}
-\begin{table*}[t]
-    \begin{center}
-      \caption{Mass and semi-major axis of planets in orbit around stars HD-28185 and HD-73256.}
-      \label{tab:table2}
-      \begin{tabular}{c|c|c}
-         & {HD-28185} & {HD-73256} \\
-        \hline
-        $m_p$ & $1.7654\pm0.1089\times10^{25}kg$ & $1.0517\pm0.0413\times10^{26}kg$ \\
-        \hline
-        $a$ & $2.2756\pm0.1365\times10^{6}m$ & $2.5446\pm0.1018\times10^{7}m$\\
-        
-      \end{tabular}
-    \end{center}
-  \end{table*}
+
 Values of $\phi_{max}$ are dimensionless in this instance as they are
 fractions of the orbital periods.
 \par
 Now that values for $v_{mean}$, $v_{s}$ and $\phi_{max}$ of both stars have 
 been calculated, it was possible to determine the mass and semi-major axis of the
 extra-solar planets in orbit around the stars (HD-28185 and HD-73256).
-The mass of the planets was calculated using %equation 1 from the lab script.
+The mass of the planets was calculated using.
+\begin{equation}
+  v_s = \left(\frac{2\pi G}{T}\right)^{1/3}M_s^{-2/3}m_p \tag{\ref{eq:mass of planet eq}}
+\end{equation}
 where the mass of the planet $m_p $ is dependent on the amplitude of the RVC $v_{s}$, the mass of the star $M_s$ and the period of the orbit of the planet $T$.
 As the mass of the parent star had not been calculated previously it was necessary to
 make an educated assumption of what this mass might be. Therefore based on the idea 
 that these stars share similar properties to the sun it was assumed that the mass of
-the parent stars was $M_s = 1.0M_{\odot}$. Then using %equation 3 from the lab script
+the parent stars was $M_s = 1.0M_{\odot}$. Then by rearrangin equation 2 we can 
+obtain an equation for a the semi-major axis.
+\begin{equation}
+  a = \left(\frac{G(M_s+m_p)T^2}{4\pi^2}\right)^{1/3}
+  \end{equation}
 it was possible to calculate the semi-major axis of the planets in orbit around the
 stars (HD-28185 and HD-73256). The values for the mass and semi-major axis of the 
 relevant planets around each star are shown in table 2, with the associated 
@@ -199,7 +214,7 @@ and $T$.
 
 
 % All relevant sections for Planetary transits method
-\newpage
+
 \section*{Introduction and Background}
 
 \section*{The Planetary Transit Method for Detecting Extra-solar Planets}
@@ -215,11 +230,55 @@ For the star being measured in this report (OGLE-III-TR56)
 the magnitude of light was measured over one orbit of the 
 planet (one phase) and the results are shown in Figure 3
 
-\section*{Conclusion}
-
-\section*{References}
+\begin{figure}[h]
+  \includegraphics[width=7cm]{images/I-band_curve.png}
+  \caption{I-band light as a function of phase for star OGLE-III-TR56}
+  \label{fig:HD-_init}
+  \end{figure}
 \newpage
+To be able to take more accurate data from this graph, it
+was necessary to limit the graph to the area of interest 
+(the dip in magnitude) as can be seen in Figure 4.
 
+\begin{figure}[h]
+  \includegraphics[width=7cm]{images/I-band_limit.png}
+  \caption{I-band light as a function of phase for star OGLE-III-TR56
+  limited to the dip in magnitude}
+  \label{fig:HD-_init}
+  \end{figure}
+
+Now that a phase-folded light curve has been obtained,
+it is possible to start calculating certain properties
+about the Extra-solar Planet that has been detected.
+THe first of these properties is the semi-major axis
+of the orbit of the planet. This was calculated using the 
+Kepler's Third law of Planetary motion as seen below.
+
+\begin{equation}
+  G(M_s+m_p) = \frac{4\pi^2a^3}{T^2} \tag{\ref{eq:semi-major axis eq}}
+  \end{equation}
+As the star that we are observing is roughly equivalent to 1 
+solar mass ($1M_\odot $) and other similar characteristics it is reasonable 
+to assume that the mass of the planet is equal to 
+the mass of the earth and therefore is negligible compared to 
+the mass of the star and therefore can be omitted. 
+Rearranging equation 2 for $a$ the semi-major axis
+gives us:
+
+\begin{equation}
+  a = \left(\frac{GM_{\odot}T^2}{4\pi^2}\right)^{1/3}
+  \end{equation}
+where $G$ is the gravitational constant, $M_\odot$ is the mass of the star,
+and $T$ is the period of the orbit of the planet.
+
+
+
+\section*{Conclusion}
+\newpage
+\onecolumn
+\section*{References}
+
+\noindent
 [1] {1992Natur.355..145W,
        author = {{Wolszczan}, A. and {Frail}, D.~A.},
         title = "{A planetary system around the millisecond pulsar PSR1257 + 12}",
@@ -245,7 +304,7 @@ planet (one phase) and the results are shown in Figure 3
 Detecting Extrasolar Planets, Astronomy 2 Lab Script, 2022-2023, 9th November 2022\parskip 0.2cm
 
 \noindent
-[4]{2020SciPy-NMeth,
+[4] {2020SciPy-NMeth,
   author  = {Virtanen, Pauli and Gommers, Ralf and Oliphant, Travis E. and
             Haberland, Matt and Reddy, Tyler and Cournapeau, David and
             Burovski, Evgeni and Peterson, Pearu and Weckesser, Warren and

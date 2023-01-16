@@ -351,6 +351,16 @@ INPUT ./images/HD-73256_phase.png
 INPUT images/HD-73256_phase.png
 INPUT ./images/HD-73256_phase.png
 INPUT ./images/HD-73256_phase.png
+INPUT ./images/I-band_curve.png
+INPUT ./images/I-band_curve.png
+INPUT images/I-band_curve.png
+INPUT ./images/I-band_curve.png
+INPUT ./images/I-band_curve.png
+INPUT ./images/I-band_limit.png
+INPUT ./images/I-band_limit.png
+INPUT images/I-band_limit.png
+INPUT ./images/I-band_limit.png
+INPUT ./images/I-band_limit.png
 INPUT Extra_solar_report.aux
 INPUT /opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb

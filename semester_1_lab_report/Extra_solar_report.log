@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Homebrew) (preloaded format=pdflatex 2022.11.23)  16 JAN 2023 14:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Homebrew) (preloaded format=pdflatex 2022.11.23)  16 JAN 2023 16:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -196,7 +196,14 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count280
 \l__pdf_internal_box=\box54
-) (./Extra_solar_report.aux)
+) (./Extra_solar_report.aux
+
+LaTeX Warning: Label `fig:HD-_init' multiply defined.
+
+
+LaTeX Warning: Label `fig:HD-_init' multiply defined.
+
+)
 \openout1 = `Extra_solar_report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
@@ -313,41 +320,54 @@ Underfull \hbox (badness 10000) in paragraph at lines 129--131
  []
 
 [3 <./images/HD-28185_init.png> <./images/HD-73256_init.png> <./images/HD-28185_phase.png> <./images/HD-73256_phase.png>]
-Overfull \hbox (3.83746pt too wide) in paragraph at lines 205--205
+Overfull \hbox (3.83746pt too wide) in paragraph at lines 220--220
 []\OT1/cmr/bx/n/14.4 The Plan-e-tary Tran-sit Method
  []
 
 
-Overfull \hbox (5.76251pt too wide) in paragraph at lines 205--205
+Overfull \hbox (5.76251pt too wide) in paragraph at lines 220--220
 \OT1/cmr/bx/n/14.4 for De-tect-ing Extra-solar Plan-
  []
 
+<images/I-band_curve.png, id=33, 973.6375pt x 520.94624pt>
+File: images/I-band_curve.png Graphic file (type png)
+<use images/I-band_curve.png>
+Package pdftex.def Info: images/I-band_curve.png  used on input line 234.
+(pdftex.def)             Requested size: 199.16928pt x 106.56415pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 [4]
-Overfull \hbox (6.22037pt too wide) in paragraph at lines 223--236
-[]\OT1/cmr/m/n/10 [1] 1992Natur.355..145W, au-thor = Wol-szczan,
+<images/I-band_limit.png, id=37, 985.6825pt x 520.94624pt>
+File: images/I-band_limit.png Graphic file (type png)
+<use images/I-band_limit.png>
+Package pdftex.def Info: images/I-band_limit.png  used on input line 244.
+(pdftex.def)             Requested size: 199.16928pt x 105.26051pt.
+
+Overfull \hbox (3.10913pt too wide) in paragraph at lines 259--267
+\OT1/cmr/m/n/10 As the star that we are ob-serv-ing is roughly equiv-
  []
 
+[5 <./images/I-band_curve.png> <./images/I-band_limit.png>] [6
 
-Overfull \hbox (80.94287pt too wide) in paragraph at lines 223--236
-\OT1/cmr/m/n/10 adsurl = https://ui.adsabs.harvard.edu/abs/1992Natur.355..145W,
- []
+] (./Extra_solar_report.aux)
 
-[5
+LaTeX Warning: There were multiply-defined labels.
 
-] (./Extra_solar_report.aux) ) 
+ ) 
 Here is how much of TeX's memory you used:
- 3654 strings out of 478268
- 57626 string characters out of 5835365
- 357913 words of memory out of 5000000
- 21821 multiletter control sequences out of 15000+600000
+ 3669 strings out of 478268
+ 58013 string characters out of 5835365
+ 357960 words of memory out of 5000000
+ 21834 multiletter control sequences out of 15000+600000
  477774 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,10n,62p,302b,234s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 55i,10n,62p,307b,234s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on Extra_solar_report.pdf (5 pages, 225232 bytes).
+Output written on Extra_solar_report.pdf (6 pages, 309770 bytes).
 PDF statistics:
- 89 PDF objects out of 1000 (max. 8388607)
- 49 compressed objects within 1 object stream
+ 96 PDF objects out of 1000 (max. 8388607)
+ 51 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1673878139 "/Users/lewismcnish/Documents/vscode/Astronomy/semester_1_lab_report/Extra_solar_report.tex" "Extra_solar_report.pdf" "Extra_solar_report" 1673878139
-  "/Users/lewismcnish/Documents/vscode/Astronomy/semester_1_lab_report/Extra_solar_report.tex" 1673878139 11643 4200773c33f71fe118796f01434767a7 ""
+["pdflatex"] 1673884835 "/Users/lewismcnish/Documents/vscode/Astronomy/semester_1_lab_report/Extra_solar_report.tex" "Extra_solar_report.pdf" "Extra_solar_report" 1673884836
+  "/Users/lewismcnish/Documents/vscode/Astronomy/semester_1_lab_report/Extra_solar_report.tex" 1673884835 13504 6a048cfe332f7d3bc13a92cc1a65b88a ""
   "/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/map/fontname/texfonts.map" 1647894602 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map" 1647894602 4385071 4481eb56d8dc7e3e247ed9a139c582cd ""
   "/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1647894602 1004 54797486969f23fa377b128694d548df ""
@@ -70,12 +70,14 @@
   "/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/tex/latex/tools/tabularx.sty" 1647894602 7147 5ac8a9ef36411064b1a501137af0fa54 ""
   "/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-dist/web2c/texmf.cnf" 1647894602 40174 4e2f94c7b252db2ad3c0cfdef6912ab3 ""
   "/opt/homebrew/Cellar/texlive/20220321_3/share/texmf-var/web2c/pdftex/pdflatex.fmt" 1647894602 2826557 3e645ef023e114e50e3f9051cb6a1bbb ""
-  "Extra_solar_report.aux" 1673878139 1007 4362805d68ce2890aac4326cec282110 "pdflatex"
-  "Extra_solar_report.tex" 1673878139 11643 4200773c33f71fe118796f01434767a7 ""
-  "images/HD-28185_init.png" 1673723520 20412 4d871db41779f0407cb32adf796abdd2 ""
-  "images/HD-28185_phase.png" 1673734388 19087 6b88326dc55b03827dda2cdaeeec133a ""
-  "images/HD-73256_init.png" 1673723735 20219 1dd27c27b1260d5d9b60fe2231b0d27b ""
-  "images/HD-73256_phase.png" 1673734411 18798 550692454c5607e9c8addc71cbc05ead ""
+  "Extra_solar_report.aux" 1673884836 1460 cc466e624df888da63ff6002093c23c9 "pdflatex"
+  "Extra_solar_report.tex" 1673884835 13504 6a048cfe332f7d3bc13a92cc1a65b88a ""
+  "images/HD-28185_init.png" 1673879548 23224 cc1e741e0adbd0dc396e407bd9371639 ""
+  "images/HD-28185_phase.png" 1673879586 21988 49a991f43ab65dfa0a448829784b29ed ""
+  "images/HD-73256_init.png" 1673879568 22552 5c8167148aeb88bbf14abd5f2608110e ""
+  "images/HD-73256_phase.png" 1673879672 21530 cf500f6b8cc6ca8d381963bb523534fc ""
+  "images/I-band_curve.png" 1673880821 69267 0f623b2099697451dbcc29a25c89bb1f ""
+  "images/I-band_limit.png" 1673881034 31629 3d331b95cefa1d0f2dd5a7d24925ad49 ""
   (generated)
   "Extra_solar_report.aux"
   "Extra_solar_report.log"
