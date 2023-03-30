@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1678802262 "/Users/lewismcnish/Documents/vscode/Astronomy/semester_2_lab_report/binary_black_holes.tex" "binary_black_holes.pdf" "binary_black_holes" 1678802262
-  "/Users/lewismcnish/Documents/vscode/Astronomy/semester_2_lab_report/binary_black_holes.tex" 1678802261 960 4c0ca69043f9e670130419c75a120016 ""
+["pdflatex"] 1679411981 "/Users/lewismcnish/Documents/vscode/Astronomy/semester_2_lab_report/binary_black_holes.tex" "binary_black_holes.pdf" "binary_black_holes" 1679411982
+  "/Users/lewismcnish/Documents/vscode/Astronomy/semester_2_lab_report/binary_black_holes.tex" 1679411981 912 395373ff7066357eed546beb015fc667 ""
   "/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/map/fontname/texfonts.map" 1647894602 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map" 1647894602 4385071 4481eb56d8dc7e3e247ed9a139c582cd ""
   "/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1647894602 1004 54797486969f23fa377b128694d548df ""
@@ -59,8 +59,8 @@
   "/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/tex/latex/tools/tabularx.sty" 1647894602 7147 5ac8a9ef36411064b1a501137af0fa54 ""
   "/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/web2c/texmf.cnf" 1647894602 40174 4e2f94c7b252db2ad3c0cfdef6912ab3 ""
   "/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-var/web2c/pdftex/pdflatex.fmt" 1647894602 2826559 17ead194e0a6184fd201d9fd0bce5c95 ""
-  "binary_black_holes.aux" 1678802262 32 044b7f8fc9779af7531264e0c5c84b6d "pdflatex"
-  "binary_black_holes.tex" 1678802261 960 4c0ca69043f9e670130419c75a120016 ""
+  "binary_black_holes.aux" 1679411982 32 044b7f8fc9779af7531264e0c5c84b6d "pdflatex"
+  "binary_black_holes.tex" 1679411981 912 395373ff7066357eed546beb015fc667 ""
   (generated)
   "binary_black_holes.aux"
   "binary_black_holes.log"
