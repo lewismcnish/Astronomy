@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1680193784 "/Users/lewismcnish/Documents/vscode/Astronomy/semester_2_lab_report/binary_black_holes.tex" "binary_black_holes.pdf" "binary_black_holes" 1680193785
-  "/Users/lewismcnish/Documents/vscode/Astronomy/semester_2_lab_report/binary_black_holes.tex" 1680193784 5678 e266fa760711091e9cb629e96bb8f0e5 ""
+["pdflatex"] 1680196073 "/Users/lewismcnish/Documents/vscode/Astronomy/semester_2_lab_report/binary_black_holes.tex" "binary_black_holes.pdf" "binary_black_holes" 1680196074
+  "/Users/lewismcnish/Documents/vscode/Astronomy/semester_2_lab_report/binary_black_holes.tex" 1680196073 8121 255ed54b28490da5faf5e3a9a23686e1 ""
   "/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/map/fontname/texfonts.map" 1647894602 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map" 1647894602 4385071 4481eb56d8dc7e3e247ed9a139c582cd ""
   "/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1647894602 1004 54797486969f23fa377b128694d548df ""
@@ -66,11 +66,13 @@
   "/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/tex/latex/tools/tabularx.sty" 1647894602 7147 5ac8a9ef36411064b1a501137af0fa54 ""
   "/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/web2c/texmf.cnf" 1647894602 40174 4e2f94c7b252db2ad3c0cfdef6912ab3 ""
   "/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-var/web2c/pdftex/pdflatex.fmt" 1647894602 2826559 17ead194e0a6184fd201d9fd0bce5c95 ""
-  "binary_black_holes.aux" 1680193785 886 c1228dc7627d869dfca06d281f5171ce "pdflatex"
-  "binary_black_holes.tex" 1680193784 5678 e266fa760711091e9cb629e96bb8f0e5 ""
+  "binary_black_holes.aux" 1680196074 1364 12e2406a72ea77b4de9abc0829820461 "pdflatex"
+  "binary_black_holes.tex" 1680196073 8121 255ed54b28490da5faf5e3a9a23686e1 ""
+  "images/SNR_gw150914.png" 1680194718 27313 566bacbcfa44c729875f36e9f52f1b64 ""
   "images/Signal_gw150914.png" 1680191219 101014 6ae54d79a96da3f70a18895fb5430825 ""
-  "images/ideal_signal_gw150914.png" 1680193449 32401 9dbba71cf43358c71db5d853891b2c50 ""
+  "images/ideal_signal_gw150914.png" 1680194658 35684 c5edf1bb3c7f544e1dd408771758e816 ""
   "images/michelson_interferometer.png" 1680186355 125393 2b4838fdee73e520faf3a82ed71bd176 ""
+  "images/snr_color.png" 1680196031 32763 eed3b4eda7607200e5ebfe81d5f16928 ""
   "images/spectrogram_gw150914.png" 1680191988 78351 6a340556bcd8cab059027a06cb9a65be ""
   (generated)
   "binary_black_holes.aux"

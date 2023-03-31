@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Homebrew) (preloaded format=pdflatex 2023.1.12)  30 MAR 2023 17:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Homebrew) (preloaded format=pdflatex 2023.1.12)  30 MAR 2023 18:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -274,20 +274,31 @@ File: images/ideal_signal_gw150914.png Graphic file (type png)
 <use images/ideal_signal_gw150914.png>
 Package pdftex.def Info: images/ideal_signal_gw150914.png  used on input line 113.
 (pdftex.def)             Requested size: 170.71652pt x 137.1691pt.
- [3 <./images/Signal_gw150914.png> <./images/spectrogram_gw150914.png> <./images/ideal_signal_gw150914.png>] (./binary_black_holes.aux) ) 
+<images/SNR_gw150914.png, id=24, 400.3758pt x 330.9966pt>
+File: images/SNR_gw150914.png Graphic file (type png)
+<use images/SNR_gw150914.png>
+Package pdftex.def Info: images/SNR_gw150914.png  used on input line 129.
+(pdftex.def)             Requested size: 170.71652pt x 141.13885pt.
+ [3 <./images/Signal_gw150914.png> <./images/spectrogram_gw150914.png> <./images/ideal_signal_gw150914.png>]
+<images/snr_color.png, id=31, 381.5856pt x 330.9966pt>
+File: images/snr_color.png Graphic file (type png)
+<use images/snr_color.png>
+Package pdftex.def Info: images/snr_color.png  used on input line 150.
+(pdftex.def)             Requested size: 170.71652pt x 148.08344pt.
+ [4 <./images/SNR_gw150914.png> <./images/snr_color.png>] (./binary_black_holes.aux) ) 
 Here is how much of TeX's memory you used:
- 3504 strings out of 478268
- 54955 string characters out of 5835366
- 352098 words of memory out of 5000000
- 21679 multiletter control sequences out of 15000+600000
+ 3520 strings out of 478268
+ 55328 string characters out of 5835366
+ 352114 words of memory out of 5000000
+ 21693 multiletter control sequences out of 15000+600000
  477774 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,7n,62p,324b,234s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 55i,7n,62p,357b,234s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on binary_black_holes.pdf (3 pages, 481243 bytes).
+Output written on binary_black_holes.pdf (4 pages, 533969 bytes).
 PDF statistics:
- 72 PDF objects out of 1000 (max. 8388607)
- 39 compressed objects within 1 object stream
+ 79 PDF objects out of 1000 (max. 8388607)
+ 41 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

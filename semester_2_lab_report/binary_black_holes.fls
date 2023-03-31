@@ -329,6 +329,16 @@ INPUT ./images/ideal_signal_gw150914.png
 INPUT images/ideal_signal_gw150914.png
 INPUT ./images/ideal_signal_gw150914.png
 INPUT ./images/ideal_signal_gw150914.png
+INPUT ./images/SNR_gw150914.png
+INPUT ./images/SNR_gw150914.png
+INPUT images/SNR_gw150914.png
+INPUT ./images/SNR_gw150914.png
+INPUT ./images/SNR_gw150914.png
+INPUT ./images/snr_color.png
+INPUT ./images/snr_color.png
+INPUT images/snr_color.png
+INPUT ./images/snr_color.png
+INPUT ./images/snr_color.png
 INPUT binary_black_holes.aux
 INPUT /opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb

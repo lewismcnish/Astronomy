@@ -104,7 +104,7 @@ correlates with the same time as the peak in the strain in Figure 2.
 Now that we have visualised the actual data form the gravitational wave, it would now
 be useful to be able to compare this to the theorectical prediction of the event.
 This can be generated using the make template function as supplied by the LIGO
-collaboration. This function takes in the masses of the two blackholes and
+collaboration. This function takes in the masses of the two black holes and
 the time, frequency, distance and uncertainty on the data. The function then returns
 a strain and time array that can be used to plot the theorectical predictions.
 This produces an ideal signal as seen in Figure 4, this is easier to see the signal as,
@@ -116,7 +116,42 @@ it no longer has any noise.
 \end{figure}
 \newline
 Later this template will be overlayed on the true data to determine the goodness of fit.
-\section*{Method}
+\section*{Detecting the signals for the ten Black hole Mergers}
+To determine the signal of the data for the ten black hole mergers the signal
+to noise ratio was used to determine the strength of the signal and its location in time.
+This could be done using the function given in the lalsuite package. This function
+returns a list of signal to noise ratios for each time in the data. If the SNR is low then the
+template that was put into the function is badly aligned or the masses of the black holes
+that were put into the template function are incorrect, and if the SNR is high
+then the template is aligned well and the masses are correct. An example SNR time series
+is shown in Figure 5.
+\begin{figure}[h]
+    \includegraphics[width=6cm]{images/SNR_gw150914.png}
+    \caption{SNR time series for GW150914, with the peak at 3.2 seconds which tells
+    us it is correctly aligned as this is the same time as obtained above}
+    \label{fig:SNR}
+\end{figure}
+This SNR at the peak is important as it can be used later to determine the masses of the
+black holes as well as other important information. So this value was stored to be used later.
+
+\section*{Determining the masses of the black holes}
+To determine the masses of the black hole pairs, some assumptions were made
+about the system. The first assumption was that m1 the mass of the first black hole is larger
+than m2 the mass of the second black hole. And the second assumption was that m1/m2 is less than 8
+as this is the maximum mass ratio expected and it helps lower the number of possible mass pairs
+for the next section. With these assumptions the mass of the black holes can be determined using
+nested for loops to iterate over 10,000 possible mass pairs and calculate the SNR for each pair, then storing this
+SNR and the corresponding mass pair. This was done for the 10 binary black hole mergers (the binary neutron star
+merger was not included in this section as it has different mass ranges, and thus will be analysed seperately
+later). With the SNR's and the mass pair options stored a color plot was created for each event, where
+the intensity of the color is proportional to the SNR and the x and y axis are the mass of each black hole.
+An example of one of these plots is shown in Figure 6.
+\begin{figure}[h]
+    \includegraphics[width=6cm]{images/snr_color.png}
+    \caption{Mass plot for GW150914, showing the mass pairs that give the highest SNR}
+    \label{fig:mass_plot}
+\end{figure}
+
 
 
 
