@@ -158,11 +158,40 @@ to be correct. From this plot and as discussed above the mass pair that is most 
 be correct is 36.06 ± 1.4 and 35.74 ± 4.3 solar masses. This is within estimated error of to the masses published
 by the LIGO collaboration of 35.6 and 30.6 solar masses
 
-
-
-
 \section*{Determining estimates for the distance, time and phase of coalescence}
 
+\begin{table*}[t]
+\begin{center}
+\begin{tabular}{|c c c c c c|}
+\hline
+Event & Distance (Mpc) & Time (s) & Phase (rad) & Mass one ($M_{\odot}$) & Mass two ($M_{\odot}$)\\
+\hline
+GW150914 & 1128 $\pm$ 82 & 3.198 $\pm$ 0.000 & 0.03 $\pm$ 0.16 & & \\
+GW151012 & 3783 $\pm$ 1677 & 2.703 $\pm$ 0.001 & 0.00 $\pm$ 0.82 & &\\
+GW151226 & 1812 $\pm$ 552 & 2.067 $\pm$ 0.000 & 0.00 $\pm$ 0.46 & &\\
+GW170104 & 2119 $\pm$ 340 & 1.975 $\pm$ 0.000 & 1.79 $\pm$ 0.32 & &\\
+GW170608 & 664 $\pm$ 81 & 3.794 $\pm$ 0.000 & 2.67 $\pm$ 0.18 & &\\
+GW170729 & 3150 $\pm$ 590 & 3.539 $\pm$ 0.001 & 2.89 $\pm$ 0.51 & &\\
+GW170809 & 2146 $\pm$ 444 & 2.641 $\pm$ 0.001 & 2.78 $\pm$ 0.42 & &\\
+GW170814 & 2268 $\pm$ 385 & 3.335 $\pm$ 0.000 & 0.00 $\pm$ 0.34 & &\\
+GW170818 & 1596 $\pm$ 417 & 2.161 $\pm$ 0.000 & 0.73 $\pm$ 0.40 & &\\
+GW170823 & 4111 $\pm$ 1121 & 4.456 $\pm$ 0.001 & 0.00 $\pm$ 0.64 & &\\
+\hline
+\end{tabular}
+\caption{Estimated values for the distance, time and phase of coalescence for the ten binary black hole mergers}
+\label{tab:estimates}
+\end{center}
+\end{table*}
+
+To find estimates for the distance, time and phase of coalescence the make template function was used again
+to generate a template for each event but this time using the masses as found above,
+as this would produce the most accurate templates for the sets of data.
+From this the SCIPY curve fit function could be used as this allow for estimated of unknown quantities depending on the
+how close the tru data/plot is to the template. However for this particlar application
+it was necessary to provide some upper and lower bounds that these value could take as this reduces the possible sollutions
+to the problem. These bounds were determined by looking at the peak and its location as well as an overall generic distance range
+for the events. The curve fit function also provides a covariance matrix which can be used to determine the error on the
+estimated values. This was repeated for each event and the results are shown in Table 1.
 
 
 
