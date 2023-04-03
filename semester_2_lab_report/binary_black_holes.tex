@@ -156,7 +156,8 @@ The black upper triangle is due to the conditional statement that mass one must 
 color is the highest is where the SNR is highest and thus the mass pair that is most likely
 to be correct. From this plot and as discussed above the mass pair that is most likely to
 be correct is 36.06 ± 1.4 and 35.74 ± 4.3 solar masses. This is within estimated error of to the masses published
-by the LIGO collaboration of 35.6 and 30.6 solar masses
+by the LIGO collaboration of 35.6 and 30.6 solar masses. This method was repeated for the ten
+black hole mergers considered in this report and the results are shown in Table 1 below.
 
 \section*{Determining estimates for the distance, time and phase of coalescence}
 
@@ -184,19 +185,41 @@ by the LIGO collaboration of 35.6 and 30.6 solar masses
 \end{table*}
 
 To find estimates for the distance, time and phase of coalescence the make template function was used again
-to generate a template for each event but this time using the masses as found above,
+to generate a template for each event but this time using the masses as found above
 as this would produce the most accurate templates for the sets of data.
 From this the SCIPY curve fit function could be used as this allow for estimated of unknown quantities depending on the
-how close the tru data/plot is to the template. However for this particlar application
-it was necessary to provide some upper and lower bounds that these value could take as this reduces the possible sollutions
+how close the true data/plot is to the template. However for this particlar application
+it was necessary to provide some upper and lower bounds that these value could take as this reduces the possible solutions
 to the problem. These bounds were determined by looking at the peak and its location as well as an overall generic distance range
 for the events. The curve fit function also provides a covariance matrix which can be used to determine the error on the
-estimated values. This was repeated for each event and the results are shown in Table 1.
+estimated values. This was repeated for each event and the results are shown in Table 1 along with the mass estimates from the previous section.
 
 
 
 
-\section*{Analysis}
+\section*{The binary neutron star merger GW170817}
+As mentioned above the binary star merger was not included in the previous analysis as it has a different mass range that is required to be
+searched over as well as some tighter parameters on the distance time and phase of coalescence as it has an overall weaker signal and therefore
+a worse SNR than the binary black hole mergers, making it more difficult to detect and requiring it to occur a lot closer to earth.
+However, it is still possible to use the same methods as above to determine the masses of the neutron stars and the distance time and phase of coalescence.
+From this the following values were found as shown in Table 2.
+\begin{table}[h]
+    \begin{center}
+        \begin{tabular}{|c c c c|}
+            \hline
+            GW170817 & Value & Error & Units\\
+            \hline
+            Distance & 40.0 & 0.1 & Mpc\\
+            Time & 1.7 & 0.1 & s\\
+            Phase & 0.0 & 0.1 & rad\\
+            Mass one & 1.63 & 0.00 & $M_{\odot}$\\
+            Mass two & 1.16 & 0.00 & $M_{\odot}$\\
+            \hline
+        \end{tabular}
+        \caption{Estimated values for the distance, time and phase of coalescence and the mass pairs for the binary neutron star merger GW170817}
+        \label{tab:estimates}
+    \end{center}
+\end{table}
 
 \section*{Conclusion}
 
