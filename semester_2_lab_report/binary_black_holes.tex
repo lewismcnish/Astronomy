@@ -47,16 +47,17 @@ be seen in Figure 1.
     \includegraphics[width=6cm]{images/michelson_interferometer.png}
     \caption{Diagram of a michelson interferometer as used in LIGO.$^1$}
     \label{fig:michelson}
-    \end{figure}
+\end{figure}
+\newline
 By using a Michelson interfermoeter in the LIGO experiment the small changes in
 distance that are required can be detected and measured. These distances can be on the
-order of 10$^{-21}$m this distance is calle dthe strain of the wave and
+order of 10$^{-21}$m this distance is called the strain of the wave and
 is the amount of stretching over the original length and can be approximated as
 \begin{equation}h \approx \frac{GM}{c^2d}\left(\frac{v}{c}\right)^2 \label{eq:strain}\end{equation}
 where $G$ is the gravitational constant, $M$ is the mass of the source, $c$ is the speed of light,
 d is the distance to the source and $v$ is the velocity of the system.
-
-caused by the passing of gravitational waves moving at the speed of light
+\newline
+This is caused by the passing of gravitational waves moving at the speed of light
 through the
 interferometer arms (which results in a shift in the interference pattern of the light beams).
 The first detection of a gravitational wave was on the 14th of
@@ -67,13 +68,14 @@ because as the two black holes accelerate towards each other they warp the
 space-time around them, and as they approach the point of coalescence the amplitude
 of these waves massively increases, thus allowing them to be detected over the Background
 noise. The run-down after merging is extremely quick and thus leaving a distinct peak
-at the time of coalescence. In this report the first 11 detections of gravitational waves
-as a result of binary black hole mergers will be analysed and discussed. Starting with GW150914.
+at the time of coalescence. In this report the first 10 detections of gravitational waves
+as a result of binary black hole mergers will be analysed and discussed alongside the first detection
+of a binary neutron star merger that will be dealt with seperately. Starting with GW150914.
 
-\section*{GW150914}
+\section*{Event GW150914}
 To be able to carry out the analysis of the gravitaional waves it was necessary to set
-up our workspace to be able to use some provided function and packages written by the
-LIGO collaboration. This was done by first installing the LIGO lalsuite package for Python 3.10
+up our workspace to be able to use some provided functions and packages written by the
+LIGO collaboration. This was done by first installing the LIGO lalsuite package for Python 3.11
 and then importing the packages into our notebook. The package contains a number of useful
 functions that will be discussed in more detail later in this report.
 For the first detection of gravitational waves GW150914 the data was provided
@@ -99,7 +101,8 @@ frequency and time. This plot is shown in Figure 3.
 \end{figure}
 \newline
 In this plot the point where the energy is high across multiple frequencies
-correlates with the same time as the peak in the strain in Figure 2.
+correlates with the same time as the peak in the strain in Figure 2, This confirms that the correct peak has been identified
+in the given data and more analysis can be carried out on it.
 
 Now that we have visualised the actual data form the gravitational wave, it would now
 be useful to be able to compare this to the theorectical prediction of the event.
