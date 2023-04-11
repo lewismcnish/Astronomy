@@ -88,7 +88,9 @@ of the gravitational wave. This plot is shown in Figure 2.
     limited to shorter time to resolve the peak more.}
     \label{fig:GW150914}
 \end{figure}
-\newpage
+\newline
+\newline
+\newline
 From Figure 2 it can be seen that the peak of the gravitaional wave occurs at
 around 3.2 seconds.
 Knowing this time we can use the SCIPY package to generate a spectrogram of strain and frequency and from this a color plot can be
@@ -105,13 +107,15 @@ correlates with the same time as the peak in the strain in Figure 2, This confir
 in the given data and more analysis can be carried out on it.
 
 Now that we have visualised the actual data form the gravitational wave, it would now
-be useful to be able to compare this to the theorectical prediction of the event.
+be useful to be able to compare this to the theorectical prediction of the event, this is necessary as it allows us
+to use some estimating functions to determine values for the distance from earth that these events occured at as well as some
+details about the coalescence, this is discussed below.
 This can be generated using the make template function as supplied by the LIGO
 collaboration. This function takes in the masses of the two black holes and
 the time, frequency, distance and uncertainty on the data. The function then returns
 a strain and time array that can be used to plot the theorectical predictions.
 This produces an ideal signal as seen in Figure 4, this is easier to see the signal as,
-it no longer has any noise.
+it no longer has any noise present in it.
 \begin{figure}[h]
     \includegraphics[width=6cm]{images/ideal_signal_gw150914.png}
     \caption{Theoretical prediction for GW150914}
@@ -120,8 +124,11 @@ it no longer has any noise.
 \newline
 Later this template will be overlayed on the true data to determine the goodness of fit.
 \section*{Detecting the signals for the ten Black hole Mergers}
+In this next section the detection of the signals will be looked at using some of the
+techniques as discussed previously.
+
 To determine the signal of the data for the ten black hole mergers the signal
-to noise ratio was used to determine the strength of the signal and its location in time.
+to noise ratio (SNR) was used to determine the strength of the signal and its location in time.
 This could be done using the function given in the lalsuite package. This function
 returns a list of signal to noise ratios for each time in the data. If the SNR is low then the
 template that was put into the function is badly aligned or the masses of the black holes
@@ -155,16 +162,9 @@ An example of one of these plots is shown in Figure 6.
     \label{fig:mass_plot}
 \end{figure}
 \newline
-The black upper triangle is due to the conditional statement that mass one must be greater than mass two. Where the
-color is the highest is where the SNR is highest and thus the mass pair that is most likely
-to be correct. From this plot and as discussed above the mass pair that is most likely to
-be correct is 36.06 ± 1.4 and 35.74 ± 4.3 solar masses. This is within estimated error of to the masses published
-by the LIGO collaboration of 35.6 and 30.6 solar masses. This method was repeated for the ten
-black hole mergers considered in this report and the results are shown in Table 1 below.
 
-\section*{Determining estimates for the distance, time and phase of coalescence}
 
-\begin{table*}[t]
+\begin{table*}[h]
     \begin{center}
         \begin{tabular}{|c c c c c c|}
             \hline
@@ -187,21 +187,44 @@ black hole mergers considered in this report and the results are shown in Table 
     \end{center}
 \end{table*}
 
+The black upper triangle is due to the conditional statement that mass one must be greater than mass two. Where the
+color is the highest is where the SNR is highest and thus the mass pair that is most likely
+to be correct. From this plot and as discussed above the mass pair that is most likely to
+be correct is 36.06 ± 1.4 and 35.74 ± 4.3 solar masses. This is within estimated error of the masses published
+by the LIGO collaboration of 35.6 and 30.6 solar masses. This method was repeated for the ten
+black hole mergers considered in this report and the results are shown in Table 1.
+
+\section*{Determining estimates for the distance, time and phase of coalescence}
+
+
+
 To find estimates for the distance, time and phase of coalescence the make template function was used again
 to generate a template for each event but this time using the masses as found above
 as this would produce the most accurate templates for the sets of data.
-From this the SCIPY curve fit function could be used as this allow for estimated of unknown quantities depending on the
+From this the SCIPY curve fit function could be used as this allow for estimates of unknown quantities depending on the
 how close the true data/plot is to the template. However for this particlar application
 it was necessary to provide some upper and lower bounds that these value could take as this reduces the possible solutions
 to the problem. These bounds were determined by looking at the peak and its location as well as an overall generic distance range
-for the events. The curve fit function also provides a covariance matrix which can be used to determine the error on the
+for the events. To help visualize this fitting of the data the plot of the generated template using these best estimates
+overlayed on the raw data has bee included and can be seen in Figure 7.
+How well these templates fit the raw data varied greatly for all the events as some couldnt identify the correct values
+or the associated errors on these values were so large that it produced a graph that was severly off (these estimates were likely to be off
+as the SNR for some events was too little to easily identify the true signal.)
+
+\begin{figure}
+    \includegraphics[width=6cm]{images/estimated_template.png}
+    \caption{The template data as generated with the estimates for all values overlayed on the raw data}
+    \label{fig:best fit}
+
+\end{figure}
+The curve fit function also provides a covariance matrix which can be used to determine the error on the
 estimated values. This was repeated for each event and the results are shown in Table 1 along with the mass estimates from the previous section.
 
 
 
 
 \section*{The binary neutron star merger GW170817}
-As mentioned above the binary star merger was not included in the previous analysis as it has a different mass range that is required to be
+As mentioned above the binary neutron star merger was not included in the previous analysis as it has a different mass range that is required to be
 searched over as well as some tighter parameters on the distance time and phase of coalescence as it has an overall weaker signal and therefore
 a worse SNR than the binary black hole mergers, making it more difficult to detect and requiring it to occur a lot closer to earth.
 However, it is still possible to use the same methods as above to determine the masses of the neutron stars and the distance time and phase of coalescence.

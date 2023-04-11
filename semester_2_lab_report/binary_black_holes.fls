@@ -318,12 +318,12 @@ INPUT ./images/Signal_gw150914.png
 INPUT images/Signal_gw150914.png
 INPUT ./images/Signal_gw150914.png
 INPUT ./images/Signal_gw150914.png
-INPUT /opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/tfm/public/cm/cmsl10.tfm
 INPUT ./images/spectrogram_gw150914.png
 INPUT ./images/spectrogram_gw150914.png
 INPUT images/spectrogram_gw150914.png
 INPUT ./images/spectrogram_gw150914.png
 INPUT ./images/spectrogram_gw150914.png
+INPUT /opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/tfm/public/cm/cmsl10.tfm
 INPUT ./images/ideal_signal_gw150914.png
 INPUT ./images/ideal_signal_gw150914.png
 INPUT images/ideal_signal_gw150914.png
@@ -340,6 +340,11 @@ INPUT images/snr_color.png
 INPUT ./images/snr_color.png
 INPUT ./images/snr_color.png
 INPUT /opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm
+INPUT ./images/estimated_template.png
+INPUT ./images/estimated_template.png
+INPUT images/estimated_template.png
+INPUT ./images/estimated_template.png
+INPUT ./images/estimated_template.png
 INPUT binary_black_holes.aux
 INPUT /opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT /opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
