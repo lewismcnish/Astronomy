@@ -8,10 +8,16 @@
 \usepackage{ragged2e}
 \usepackage{array}
 \usepackage{tabularx}
+% \usepackage[english]{babel}
+% \usepackage{biblatex}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+%\usepackage[hidelinks]{natbib,hyperref}
 
 
 
 \graphicspath{{./images/}}
+
 
 \pagestyle{myheadings}
 \markright{Binary black hole detections\hfill 2663452m\hfill 12/04/2023\hfill}
@@ -46,8 +52,8 @@ special and general relativity, are ripples in the fabric of space-time due to t
 and have been notoriously hard to detect. That was until
 the LIGO Michelson interferometer in Hanford and Livingston was complete in 2015.
 A Michelson interferometer is a device that uses the interference of two beams of
-light to detect small changes in the path distance of the two beams. A diagram of one can
-be seen in Figure 1.
+light to detect small changes in the path distance of the two. A diagram of one can
+be seen in Figure \ref{fig:michelson}.
 \begin{figure}[h]
     \includegraphics[width=6cm]{images/michelson_interferometer.png}
     \caption{Diagram of a michelson interferometer as used in LIGO.$^1$}
@@ -56,7 +62,7 @@ be seen in Figure 1.
 \newline
 By using a Michelson interfermoeter in the LIGO experiment the small changes in
 distance that are required can be detected and measured. These distances can be on the
-order of 10$^{-21}$m this distance is called the strain of the wave and
+order of 10$^{-21}$m this is called the strain of the wave and
 is the amount of stretching over the original length and can be approximated as
 \begin{equation}h \approx \frac{GM}{c^2d}\left(\frac{v}{c}\right)^2 \label{eq:strain}\end{equation}
 where $G$ is the gravitational constant, $M$ is the mass of the source, $c$ is the speed of light,
@@ -66,16 +72,16 @@ This is caused by the passing of gravitational waves moving at the speed of ligh
 through the
 interferometer arms (which results in a shift in the interference pattern of the light beams).
 The first detection of a gravitational wave was on the 14th of
-September 2015, just 100 years after the publication of Einstiens paper.
+September 2015, just 100 years after the publication of Einsteins paper.
 The first detection was of a binary black hole merger, these mergers commonly
 release a large amount of energy in the form of gravitational waves. This happens
 because as the two black holes accelerate towards each other they warp the
 space-time around them, and as they approach the point of coalescence the amplitude
 of these waves massively increases, thus allowing them to be detected over the Background
-noise. The run-down after merging is extremely quick and thus leaving a distinct peak
+noise. The ring-down after merging is extremely quick and thus leaving a distinct peak
 at the time of coalescence. In this report the first 10 detections of gravitational waves
 as a result of binary black hole mergers will be analysed and discussed alongside the first detection
-of a binary neutron star merger that will be dealt with seperately. Starting with GW150914.
+of a binary neutron star merger that will be dealt with seperately starting with GW150914.
 
 \section*{Event GW150914}
 To be able to carry out the analysis of the gravitaional waves it was necessary to set
@@ -85,22 +91,20 @@ and then importing the packages into our notebook. The package contains a number
 functions that will be discussed in more detail later in this report.
 For the first detection of gravitational waves GW150914 the data was provided
 by the university through the Jupyter Hub. Once this data was loaded in
-the first step was to plot the strain against the time and identify by eye the peak
-of the gravitational wave. This plot is shown in Figure 2.
+the first thing to do was identify by eye the peak
+of the gravitational wave. The plot used to do this is shown in Figure \ref{fig:GW150914}
 \begin{figure}
     \includegraphics[width=6cm]{images/Signal_gw150914.png}
     \caption{top: Plot of the strain against time for GW150914 bottom:
     limited to shorter time to resolve the peak more.}
     \label{fig:GW150914}
 \end{figure}
-\newline
-\newline
-\newline
-From Figure 2 it can be seen that the peak of the gravitaional wave occurs at
+
+From Figure \ref{fig:GW150914} it can be seen that the peak of the gravitaional wave occurs at
 around 3.2 seconds.
 Knowing this time we can use the SCIPY package to generate a spectrogram of strain and frequency and from this a color plot can be
 created which visualizes the amount of energy in the gravitational wave at a given
-frequency and time. This plot is shown in Figure 3.
+frequency and time. This plot is shown in Figure \ref{fig:spectrogram}.
 \begin{figure}[h]
     \includegraphics[width=6cm]{images/spectrogram_gw150914.png}
     \caption{Spectrogram of GW150914, showing the 'chirp' track of the gravitational wave.}
@@ -108,10 +112,10 @@ frequency and time. This plot is shown in Figure 3.
 \end{figure}
 \newline
 In this plot the point where the energy is high across multiple frequencies
-correlates with the same time as the peak in the strain in Figure 2, This confirms that the correct peak has been identified
+correlates with the same time as the peak in the strain in Figure \ref{fig:GW150914}, This confirms that the correct peak has been identified
 in the given data and more analysis can be carried out on it.
 
-Now that we have visualised the actual data form the gravitational wave, it would now
+Now that we have visualised the actual data from the gravitational wave, it would now
 be useful to be able to compare this to the theorectical prediction of the event, this is necessary as it allows us
 to use some estimating functions to determine values for the distance from earth that these events occured at as well as some
 details about the coalescence, this is discussed below.
@@ -119,7 +123,7 @@ This can be generated using the make template function as supplied by the LIGO
 collaboration. This function takes in the masses of the two black holes and
 the time, frequency, distance and uncertainty on the data. The function then returns
 a strain and time array that can be used to plot the theorectical predictions.
-This produces an ideal signal as seen in Figure 4, this is easier to see the signal as,
+This produces an ideal signal as seen in Figure \ref{fig:ideal_signal}, this is easier to see the signal as
 it no longer has any noise present in it.
 \begin{figure}[h]
     \includegraphics[width=6cm]{images/ideal_signal_gw150914.png}
@@ -139,7 +143,7 @@ returns a list of signal to noise ratios for each time in the data. If the SNR i
 template that was put into the function is badly aligned or the masses of the black holes
 that were put into the template function are incorrect, and if the SNR is high
 then the template is aligned well and the masses are correct. An example SNR time series
-is shown in Figure 5.
+is shown in Figure \ref{fig:SNR}.
 \begin{figure}[h]
     \includegraphics[width=6cm]{images/SNR_gw150914.png}
     \caption{SNR time series for GW150914, with the peak at 3.2 seconds which tells
@@ -154,13 +158,13 @@ To determine the masses of the black hole pairs, some assumptions were made
 about the system. The first assumption was that m1 the mass of the first black hole is larger
 than m2 the mass of the second black hole. And the second assumption was that m1/m2 is less than 8
 as this is the maximum mass ratio expected and it helps lower the number of possible mass pairs
-for the next section. With these assumptions the mass of the black holes can be determined using
-nested for loops to iterate over 10,000 possible mass pairs and calculate the SNR for each pair, then storing this
+for the next section. With these assumptions the mass of the black holes can be determined by
+iterating over 10,000 possible mass pairs and calculating the SNR for each pair, then storing this
 SNR and the corresponding mass pair. This was done for the 10 binary black hole mergers (the binary neutron star
 merger was not included in this section as it has different mass ranges, and thus will be analysed seperately
 later). With the SNR's and the mass pair options stored a color plot was created for each event, where
 the intensity of the color is proportional to the SNR and the x and y axis are the mass of each black hole.
-An example of one of these plots is shown in Figure 6.
+An example of one of these plots is shown in Figure \ref{fig:mass_plot}.
 \begin{figure}[h]
     \includegraphics[width=6cm]{images/snr_color.png}
     \caption{Mass plot for GW150914, showing the mass pairs that give the highest SNR}
@@ -171,6 +175,8 @@ An example of one of these plots is shown in Figure 6.
 
 \begin{table*}[h]
     \begin{center}
+        \caption{Estimated values for the distance, time and phase of coalescence and the mass pairs for the ten binary black hole mergers}
+        \label{tab:estimates}
         \begin{tabular}{|c c c c c c|}
             \hline
             Event & Distance (Mpc) & Time (s) & Phase (rad) & Mass one ($M_{\odot}$) & Mass two ($M_{\odot}$)\\
@@ -187,8 +193,7 @@ An example of one of these plots is shown in Figure 6.
             GW170823 & 4111 $\pm$ 1121 & 4.456 $\pm$ 0.001 & 0.00 $\pm$ 0.64 & 55.25 & 26.26 \\
             \hline
         \end{tabular}
-        \caption{Estimated values for the distance, time and phase of coalescence and the mass pairs for the ten binary black hole mergers}
-        \label{tab:estimates}
+
     \end{center}
 \end{table*}
 
@@ -211,7 +216,7 @@ how close the true data/plot is to the template. However for this particlar appl
 it was necessary to provide some upper and lower bounds that these value could take as this reduces the possible solutions
 to the problem. These bounds were determined by looking at the peak and its location as well as an overall generic distance range
 for the events. To help visualize this fitting of the data the plot of the generated template using these best estimates
-overlayed on the raw data has bee included and can be seen in Figure 7.
+overlayed on the raw data has bee included and can be seen in Figure \ref{fig:best_fit}.
 How well these templates fit the raw data varied greatly for all the events as some couldn't identify the correct values
 or the associated errors on these values were so large that it produced a graph that was severly off (these estimates were likely to be off
 as the SNR for some events was too little to easily identify the true signal.)
@@ -219,7 +224,7 @@ as the SNR for some events was too little to easily identify the true signal.)
 \begin{figure}
     \includegraphics[width=6cm]{images/estimated_template.png}
     \caption{The template data as generated with the estimates for all values overlayed on the raw data}
-    \label{fig:best fit}
+    \label{fig:best_fit}
 
 \end{figure}
 The curve fit function also provides a covariance matrix which can be used to determine the error on the
@@ -243,6 +248,8 @@ However, it is still possible to use the same methods as above to determine the 
 From this the following values were found as shown in Table 2.
 \begin{table}[h]
     \begin{center}
+        \caption{Estimated values for the distance, time and phase of coalescence and the mass pairs for the binary neutron star merger GW170817}
+        \label{tab:estimates}
         \begin{tabular}{|c c c c|}
             \hline
             GW170817 & Value & Error ±& Units\\
@@ -254,8 +261,7 @@ From this the following values were found as shown in Table 2.
             Mass two & 1.16 & 0.00 & $M_{\odot}$\\
             \hline
         \end{tabular}
-        \caption{Estimated values for the distance, time and phase of coalescence and the mass pairs for the binary neutron star merger GW170817}
-        \label{tab:estimates}
+
     \end{center}
 \end{table}
 
@@ -275,6 +281,12 @@ it will only skew the results as for a neutron star merger to be detected it had
 close to earth due to the weakness f its signal and the masses in the pair are going to be
 significantly lower then that of the black hole merger pairs.
 \subsection*{The mass distribution of events}
+\begin{figure}
+    \includegraphics[width=6cm]{images/mass_pairs.png}
+    \caption{Total mass of a merger as a function of its distance from earth}
+    \label{fig:mass_pairs}
+\end{figure}
+
 When looking at the mass candidates for the binary black hole mergers, the individual masses are genrally in the region of
 30-40 $M_{\odot}$ with some outliers as high as 76 $M_{\odot}$ and as low as 8.4 $M_{\odot}$, this upper limit is because as the masses increse the frequency of the emitted waves
 decreases and on earth interferometers are not sensitive enough to be able to detect this. And the lower mass limit is due to the
@@ -294,5 +306,13 @@ are not sensitive enough for this.
 
 \section*{Conclusion}
 
-\section*{References}
+% \bibliographystyle{Plain}
+\cite{Galileo}
+
 \end{document}
+
+\bibstyle{unsrt}
+\bibliography{ref.bib}
+
+
+
