@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1681214833 "/Users/lewismcnish/Documents/vscode/Astronomy/semester_2_lab_report/binary_black_holes.tex" "binary_black_holes.pdf" "binary_black_holes" 1681214834
-  "/Users/lewismcnish/Documents/vscode/Astronomy/semester_2_lab_report/binary_black_holes.tex" 1681214833 15353 f6935cefec40634f4449fe0aacdc4719 ""
+["pdflatex"] 1681288689 "/Users/lewismcnish/Documents/vscode/Astronomy/semester_2_lab_report/binary_black_holes.tex" "binary_black_holes.pdf" "binary_black_holes" 1681288690
+  "/Users/lewismcnish/Documents/vscode/Astronomy/semester_2_lab_report/binary_black_holes.tex" 1681288689 16825 1d6a2da8508df6a66efc1e79ba8c4247 ""
   "/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1647894602 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/map/fontname/texfonts.map" 1647894602 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map" 1647894602 4385071 4481eb56d8dc7e3e247ed9a139c582cd ""
@@ -77,8 +77,8 @@
   "/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/tex/latex/tools/tabularx.sty" 1647894602 7147 5ac8a9ef36411064b1a501137af0fa54 ""
   "/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-dist/web2c/texmf.cnf" 1647894602 40174 4e2f94c7b252db2ad3c0cfdef6912ab3 ""
   "/opt/homebrew/Cellar/texlive/20220321_4/share/texmf-var/web2c/pdftex/pdflatex.fmt" 1647894602 2826559 17ead194e0a6184fd201d9fd0bce5c95 ""
-  "binary_black_holes.aux" 1681214834 2107 1ddf7d7f56bf66f1a471e744f989d92d "pdflatex"
-  "binary_black_holes.tex" 1681214833 15353 f6935cefec40634f4449fe0aacdc4719 ""
+  "binary_black_holes.aux" 1681288690 2107 c418dc5b824bf9f0236a8bbab8972dee "pdflatex"
+  "binary_black_holes.tex" 1681288689 16825 1d6a2da8508df6a66efc1e79ba8c4247 ""
   "images/SNR_gw150914.png" 1680194718 27313 566bacbcfa44c729875f36e9f52f1b64 ""
   "images/Signal_gw150914.png" 1680191219 101014 6ae54d79a96da3f70a18895fb5430825 ""
   "images/estimated_template.png" 1681207530 75476 6300b3e4c6600171de7494f06ebed82f ""
