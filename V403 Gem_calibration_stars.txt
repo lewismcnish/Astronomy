@@ -1,0 +1,3 @@
+ID, RA, DE, Gmag, Gmagerr, Rmag, Rmagerr, Imag, Imagerr
+1, 100.99968910,22.72861695,15.897
+2, 101.02018404, 22.74359202, 15.793
