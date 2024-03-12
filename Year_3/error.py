@@ -30,15 +30,17 @@ from astroquery.astrometry_net import AstrometryNet
 from astroquery.exceptions import TimeoutError
 
 
-path_cal = '/Volumes/external_2T/calibration/2023-10/neg10c/master'
-path_data =  '/Volumes/external_2T'
-target_jd = []
-target_mags = []
+
 
 RADIUS = 19
 
-def light_curve(star:str,band:str,exposure:str, radius: int = RADIUS, solver: bool = True) -> None:
-    
+def cal_star_mags(star:str,band:str,exposure:str, radius: int = RADIUS, solver: bool = True, Threshold: int = 4) -> None:
+    path_cal = '/Volumes/external_2T/calibration/2023-10/neg10c/master'
+    path_data =  '/Volumes/external_2T'
+    target_jd = []
+    target_mags = []
+    calibration_mags = []
+
     '''
     Function to calibrate raw .fits files, plate solve and extract magnitudes \n
     Star is a string \n
@@ -111,7 +113,7 @@ def light_curve(star:str,band:str,exposure:str, radius: int = RADIUS, solver: bo
 
             img_c = (img_data-dark_data)*(np.mean(flat-flatdark_data))/(flat-flatdark_data)
             mean, median, std = sigma_clipped_stats(img_c)
-            daofind = DAOStarFinder(fwhm=4, threshold=3.5*std)  
+            daofind = DAOStarFinder(fwhm=4, threshold = Threshold*std)  
             sources = daofind(img_c)
 
             for col in sources.colnames:  
@@ -168,8 +170,54 @@ def light_curve(star:str,band:str,exposure:str, radius: int = RADIUS, solver: bo
             r1=radius
             r2=r1+2
             r3=r2+4
-
+            
+            
+            
             # plot blue circles around the calibration stars from VizieR
+            for i in range(len(ra_cal)):
+                
+                mag_cal1 = np.sort(np.array(mag_cal1))
+                sourcex , sourcey = wcs.wcs_world2pix(ra_cal[i],dec_cal[i],1)
+                source = np.transpose((sourcex, sourcey))
+                source_aperture = CircularAperture(source, r1)
+                source_annulus = CircularAnnulus(source, r2, r3)
+                source_phot = [source_aperture, source_annulus]
+                # source_aperture.plot(color='blue', lw=2, alpha=1) 
+                # source_annulus.plot(color='deepskyblue', lw=2, alpha=1)
+                phot_table_source = aperture_photometry(img_c, source_phot)
+                for col in phot_table_source.colnames:
+                    phot_table_source[col].info.format = '%.8g'  # for consistent table output
+                bkg_mean_cal = float(phot_table_source[0]['aperture_sum_1'] / source_annulus.area)
+                bcal = bkg_mean_cal * source_aperture.area
+                cal_flux=float(phot_table_source1[0]['aperture_sum_0'] - bcal)
+                mag_cal_arr = []
+                for j in range(len(ra_cal)):
+                    if i == j:
+                        continue
+                    sourcex , sourcey = wcs.wcs_world2pix(ra_cal[i],dec_cal[i],1)
+                    source = np.transpose((sourcex, sourcey))
+                    source_aperture = CircularAperture(source, r1)
+                    source_annulus = CircularAnnulus(source, r2, r3)
+                    source_phot = [source_aperture, source_annulus]
+                    # source_aperture.plot(color='blue', lw=2, alpha=1) 
+                    # source_annulus.plot(color='deepskyblue', lw=2, alpha=1)
+                    phot_table_source = aperture_photometry(img_c, source_phot)
+                    for col in phot_table_source.colnames:
+                        phot_table_source[col].info.format = '%.8g'  # for consistent table output
+                    bkg_mean_cal = float(phot_table_source[0]['aperture_sum_1'] / source_annulus.area)
+                    bcal = bkg_mean_cal * source_aperture.area
+                    cal_flux2=float(phot_table_source1[0]['aperture_sum_0'] - bcal)
+                    mag_cal=mag_cal1[j] + 2.5*np.log10(cal_flux/cal_flux2)
+
+                    mag_cal_arr.append(mag_cal)
+                    
+                mag_cal_final = np.mean(mag_cal_arr)
+                calibration_mags.append(mag_cal_final)
+                
+
+            
+            
+            
             source1_x, source1_y= wcs.wcs_world2pix(ra_cal,dec_cal,1)
             source1 = np.transpose((source1_x, source1_y))
             source1_aperture = CircularAperture(source1, r1)  
@@ -246,7 +294,26 @@ def light_curve(star:str,band:str,exposure:str, radius: int = RADIUS, solver: bo
             target_mags.append(mag_targ)
             target_jd.append(t_jd)
             print(mag_targ)
+            
+            if counter == 0:
+                break
             counter +=1
+    g_inds = mag_g_cal.argsort()
+    g_err = mag_g_err[g_inds]
+    g_cal = mag_g_cal[g_inds]
+    i_inds = mag_i_cal.argsort()
+    i_err = mag_i_err[i_inds]
+    i_cal = mag_i_cal[i_inds]
+    r_inds = mag_r_cal.argsort()
+    r_err = mag_r_err[r_inds]
+    r_cal = mag_r_cal[r_inds]
+    
+    data = np.transpose(np.array([calibration_mags, g_cal, g_err, i_cal, i_err, r_cal, r_err]))
 
+    np.savetxt(star + 'err.txt',data,delimiter=',',header='mags cali stars, g mag, g err, i mag, i err, r mag, r err')
+
+
+    
+    return calibration_mags, g_cal, g_err, i_cal, i_err, r_cal, r_err
 
 
