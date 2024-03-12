@@ -1,0 +1,2 @@
+# mags cali stars, g mag, g err, i mag, i err, r mag, r err
+nan

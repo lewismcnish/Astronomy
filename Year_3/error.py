@@ -23,6 +23,7 @@ import warnings
 warnings.filterwarnings('ignore')
 from astropy.stats import sigma_clipped_stats
 import pandas as pd
+from scipy.optimize import curve_fit
 
 
 
@@ -31,25 +32,26 @@ from astroquery.exceptions import TimeoutError
 
 
 
-
 RADIUS = 19
 
-def cal_star_mags(star:str,band:str,exposure:str, radius: int = RADIUS, solver: bool = True, Threshold: int = 4) -> None:
-    path_cal = '/Volumes/external_2T/calibration/2023-10/neg10c/master'
-    path_data =  '/Volumes/external_2T'
-    target_jd = []
-    target_mags = []
-    calibration_mags = []
-
+def light_curve(star:str,band:str,exposure:str, radius: int = RADIUS, solver: bool = True) -> None:
+    
     '''
     Function to calibrate raw .fits files, plate solve and extract magnitudes \n
     Star is a string \n
     Band is the colour band \n 
     Exposure is the exposure time in seconds (time with s)
     '''
-    
-    data_cal = np.transpose(np.loadtxt(path_data + '/'+ 'cal_stars/' + star + '_calibration_stars.txt', skiprows=1, delimiter=","))
+    path_cal = '/Volumes/external_2T/calibration/2023-10/neg10c/master'
+    path_data =  '/Volumes/external_2T'
+    target_jd = []
+    target_mags = []
+    final_err = []
 
+
+
+    data_cal = np.transpose(np.loadtxt(path_data + '/'+ 'cal_stars/' + star + '_calibration_stars.txt', skiprows=1, delimiter=","))
+    id = np.array(data_cal[0])
     mag_g_cal=data_cal[3]
     mag_g_err = data_cal[4]
     mag_i_cal=data_cal[7]
@@ -113,7 +115,7 @@ def cal_star_mags(star:str,band:str,exposure:str, radius: int = RADIUS, solver: 
 
             img_c = (img_data-dark_data)*(np.mean(flat-flatdark_data))/(flat-flatdark_data)
             mean, median, std = sigma_clipped_stats(img_c)
-            daofind = DAOStarFinder(fwhm=4, threshold = Threshold*std)  
+            daofind = DAOStarFinder(fwhm=4, threshold=3.5*std)  
             sources = daofind(img_c)
 
             for col in sources.colnames:  
@@ -150,14 +152,8 @@ def cal_star_mags(star:str,band:str,exposure:str, radius: int = RADIUS, solver: 
             except TimeoutError:       
                 print('\n -> ##FAIL: Timeout while solving, try a longer timeout, optmise number of sources (200-800 seems about right)')
                 wcs = WCS(img_header)
-            # with fits.open(filename+'corrected'+img) as hdu:
-            #     reloaded_header = hdu[0].header
-            #     reloaded_data   = hdu[0].data
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++PLATE SOLVING++++++++++++++++++++++++++++++++++++++++++++++++++++
-            # number of sources from DAO Starfinder to plot
             N_source=20
-            # number of calibration stars to plot
-
 
 
 
@@ -170,54 +166,8 @@ def cal_star_mags(star:str,band:str,exposure:str, radius: int = RADIUS, solver: 
             r1=radius
             r2=r1+2
             r3=r2+4
-            
-            
-            
+
             # plot blue circles around the calibration stars from VizieR
-            for i in range(len(ra_cal)):
-                
-                mag_cal1 = np.sort(np.array(mag_cal1))
-                sourcex , sourcey = wcs.wcs_world2pix(ra_cal[i],dec_cal[i],1)
-                source = np.transpose((sourcex, sourcey))
-                source_aperture = CircularAperture(source, r1)
-                source_annulus = CircularAnnulus(source, r2, r3)
-                source_phot = [source_aperture, source_annulus]
-                # source_aperture.plot(color='blue', lw=2, alpha=1) 
-                # source_annulus.plot(color='deepskyblue', lw=2, alpha=1)
-                phot_table_source = aperture_photometry(img_c, source_phot)
-                for col in phot_table_source.colnames:
-                    phot_table_source[col].info.format = '%.8g'  # for consistent table output
-                bkg_mean_cal = float(phot_table_source[0]['aperture_sum_1'] / source_annulus.area)
-                bcal = bkg_mean_cal * source_aperture.area
-                cal_flux=float(phot_table_source[0]['aperture_sum_0'] - bcal)
-                mag_cal_arr = []
-                for j in range(len(ra_cal)):
-                    if i == j:
-                        continue
-                    sourcex , sourcey = wcs.wcs_world2pix(ra_cal[i],dec_cal[i],1)
-                    source = np.transpose((sourcex, sourcey))
-                    source_aperture = CircularAperture(source, r1)
-                    source_annulus = CircularAnnulus(source, r2, r3)
-                    source_phot = [source_aperture, source_annulus]
-                    # source_aperture.plot(color='blue', lw=2, alpha=1) 
-                    # source_annulus.plot(color='deepskyblue', lw=2, alpha=1)
-                    phot_table_source = aperture_photometry(img_c, source_phot)
-                    for col in phot_table_source.colnames:
-                        phot_table_source[col].info.format = '%.8g'  # for consistent table output
-                    bkg_mean_cal = float(phot_table_source[0]['aperture_sum_1'] / source_annulus.area)
-                    bcal = bkg_mean_cal * source_aperture.area
-                    cal_flux2=float(phot_table_source[0]['aperture_sum_0'] - bcal)
-                    mag_cal=mag_cal1[j] + 2.5*np.log10(cal_flux/cal_flux2)
-
-                    mag_cal_arr.append(mag_cal)
-                    
-                mag_cal_final = np.mean(mag_cal_arr)
-                calibration_mags.append(mag_cal_final)
-                
-
-            
-            
-            
             source1_x, source1_y= wcs.wcs_world2pix(ra_cal,dec_cal,1)
             source1 = np.transpose((source1_x, source1_y))
             source1_aperture = CircularAperture(source1, r1)  
@@ -288,32 +238,80 @@ def cal_star_mags(star:str,band:str,exposure:str, radius: int = RADIUS, solver: 
             targ_flux=float(phot_table_source2[0]['aperture_sum_0'] - targcal)
             mag_targ=mag_cal1[0] + 2.5*np.log10(cal1_flux/targ_flux)
 
+            #-----------------------------------------------------------------------------------------------------------------------------------------
+            zp_arr = []
+            cali_err_arr = []
+            for i in range(len(ra_cal)):
+                instru_mag_cali = 2.5*np.log10(cal1_flux)
+                zp = mag_cal1[i] - instru_mag_cali[i]
+                zp_arr.append(zp)
+                cali_err = np.sqrt((mag_err[i]/mag_cal1[i])**2)
+                cali_err_arr.append(cali_err)
+                
+
+                
+            plt.figure(figsize = (12,10))
+            plt.scatter(id, zp)
+
+            def linear(x, m, c):
+                return m*x + c
+            popt, pcov = curve_fit(linear(), id, zp)
+            zp_err = np.sqrt(np.diag(pcov))
+            plt.plot(id, linear(id, *popt), 'r-')
+            plt.show()
+            
+            
+            for i in range(len(zp_arr)):
+                if np.abs(zp[i]- popt[1])>= 3*zp_err:
+                    zp_arr.pop(i)
+                    cali_err_arr.pop(i)
+
+
+            apparent_mag_targ = 2.5*np.log10(targ_flux) + popt[1]
+            
+            cali_err_fin = np.mean(cali_err_arr)
+            
+            final_err_in = np.sqrt((zp_err/popt[1])**2+(cali_err_fin)**2)
+            
+
+
+
+
+
+
+
+
+
+#-----------------------------------------------------------------------------------------------------------------------------------------
+            
+            
             t_fits=img_header['DATE-OBS']
             t = Time(t_fits, format='isot', scale='utc')
             t_jd=t.jd 
-            target_mags.append(mag_targ)
+            target_mags.append(apparent_mag_targ)
             target_jd.append(t_jd)
+            final_err.append(final_err_in)
             print(mag_targ)
-            
-            if counter == 0:
-                break
             counter +=1
-    g_inds = mag_g_cal.argsort()
-    g_err = mag_g_err[g_inds]
-    g_cal = mag_g_cal[g_inds]
-    i_inds = mag_i_cal.argsort()
-    i_err = mag_i_err[i_inds]
-    i_cal = mag_i_cal[i_inds]
-    r_inds = mag_r_cal.argsort()
-    r_err = mag_r_err[r_inds]
-    r_cal = mag_r_cal[r_inds]
-    
-    data = np.transpose(np.array([calibration_mags, g_cal, g_err, i_cal, i_err, r_cal, r_err]))
-
-    np.savetxt(star + 'err.txt',data,delimiter=',',header='mags cali stars, g mag, g err, i mag, i err, r mag, r err')
 
 
-    
-    return calibration_mags, g_cal, g_err, i_cal, i_err, r_cal, r_err
+
+    df = pd.DataFrame({'JD': target_jd, 'Magnitude': target_mags, 'Error': final_err})
+    df.to_csv(star+'_'+band+'_lightcurve.csv', index = False)
 
 
+
+
+
+
+
+
+
+
+
+# zp = apparent_mag_cali[i] - intru_mag_cali[i]
+# plt.scatter(zp, index_of_star)
+# scipy.curve_fit
+# std_away_from_fit = error on zp
+# apparent_mag_targ = instru_mag_targ(from pogsons) + avg_zp(from curve fit)
+# in quardrature add big_err_eq(err on pogsons) and error_on_zp
