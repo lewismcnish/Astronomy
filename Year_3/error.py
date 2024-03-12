@@ -34,7 +34,7 @@ from astroquery.exceptions import TimeoutError
 
 RADIUS = 19
 
-def light_curve(star:str,band:str,exposure:str, radius: int = RADIUS, solver: bool = True) -> None:
+def error_func(star:str,band:str,exposure:str, radius: int = RADIUS, solver: bool = True) -> None:
     
     '''
     Function to calibrate raw .fits files, plate solve and extract magnitudes \n
@@ -241,30 +241,44 @@ def light_curve(star:str,band:str,exposure:str, radius: int = RADIUS, solver: bo
             #-----------------------------------------------------------------------------------------------------------------------------------------
             zp_arr = []
             cali_err_arr = []
-            for i in range(len(ra_cal)):
+            
+            inds = np.argsort(mag_cal1)
+            mag_cal1 = mag_cal1[inds]
+            mag_err = mag_err[inds]
+            
+            for i in np.arange(len(ra_cal)):
+                
+                
+                bkg_mean_cal1 = float(phot_table_source1[i]['aperture_sum_1'] / source1_annulus.area)
+                bcal1 = bkg_mean_cal1 * source1_aperture.area
+
+                cal1_flux=float(phot_table_source1[i]['aperture_sum_0'] - bcal1)
+                print(cal1_flux)
                 instru_mag_cali = 2.5*np.log10(cal1_flux)
-                zp = mag_cal1[i] - instru_mag_cali[i]
+                print(instru_mag_cali, mag_cal1[i])
+                zp = mag_cal1[i] - instru_mag_cali
                 zp_arr.append(zp)
                 cali_err = np.sqrt((mag_err[i]/mag_cal1[i])**2)
                 cali_err_arr.append(cali_err)
                 
-
+            print(zp_arr, cali_err_arr)
                 
             plt.figure(figsize = (12,10))
-            plt.scatter(id, zp)
+            plt.scatter(id, zp_arr)
 
             def linear(x, m, c):
                 return m*x + c
-            popt, pcov = curve_fit(linear(), id, zp)
+            popt, pcov = curve_fit(linear, id, zp_arr, p0 = [0, 0])
             zp_err = np.sqrt(np.diag(pcov))
             plt.plot(id, linear(id, *popt), 'r-')
             plt.show()
-            
+
             
             for i in range(len(zp_arr)):
-                if np.abs(zp[i]- popt[1])>= 3*zp_err:
+                if np.abs(zp_arr[i]- popt[1])>= 3*zp_err[1]:
                     zp_arr.pop(i)
                     cali_err_arr.pop(i)
+                    
 
 
             apparent_mag_targ = 2.5*np.log10(targ_flux) + popt[1]
