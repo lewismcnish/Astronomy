@@ -189,7 +189,7 @@ def cal_star_mags(star:str,band:str,exposure:str, radius: int = RADIUS, solver: 
                     phot_table_source[col].info.format = '%.8g'  # for consistent table output
                 bkg_mean_cal = float(phot_table_source[0]['aperture_sum_1'] / source_annulus.area)
                 bcal = bkg_mean_cal * source_aperture.area
-                cal_flux=float(phot_table_source1[0]['aperture_sum_0'] - bcal)
+                cal_flux=float(phot_table_source[0]['aperture_sum_0'] - bcal)
                 mag_cal_arr = []
                 for j in range(len(ra_cal)):
                     if i == j:
@@ -206,7 +206,7 @@ def cal_star_mags(star:str,band:str,exposure:str, radius: int = RADIUS, solver: 
                         phot_table_source[col].info.format = '%.8g'  # for consistent table output
                     bkg_mean_cal = float(phot_table_source[0]['aperture_sum_1'] / source_annulus.area)
                     bcal = bkg_mean_cal * source_aperture.area
-                    cal_flux2=float(phot_table_source1[0]['aperture_sum_0'] - bcal)
+                    cal_flux2=float(phot_table_source[0]['aperture_sum_0'] - bcal)
                     mag_cal=mag_cal1[j] + 2.5*np.log10(cal_flux/cal_flux2)
 
                     mag_cal_arr.append(mag_cal)
