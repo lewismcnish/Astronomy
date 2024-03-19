@@ -268,24 +268,32 @@ def error_func(star:str,band:str,exposure:str, radius: int = RADIUS, solver: boo
 
             def linear(x, m, c):
                 return m*x + c
-            popt, pcov = curve_fit(linear, id, zp_arr, p0 = [0, 0])
-            zp_err = np.sqrt(np.diag(pcov))
-            plt.plot(id, linear(id, *popt), 'r-')
+            
+            for i in zp_arr:
+                if i == np.nan:
+                    zp_arr.pop(i)
+                    
+            # zp_arr[~np.isnan(zp_arr)]
+            lin = np.linspace(0, len(zp_arr), 1)
+            # popt, pcov = curve_fit(linear, id, zp_arr, p0 = [0, 0])
+            # zp_err = np.sqrt(np.diag(pcov))
+            # plt.plot(id, linear(id, *popt), 'r-')
+            plt.plot(lin, zp_arr, 'r-')
             plt.show()
 
             
-            for i in range(len(zp_arr)):
-                if np.abs(zp_arr[i]- popt[1])>= 3*zp_err[1]:
-                    zp_arr.pop(i)
-                    cali_err_arr.pop(i)
+            # for i in range(len(zp_arr)):
+            #     if np.abs(zp_arr[i]- popt[1])>= 3*zp_err[1]:
+            #         zp_arr.pop(i)
+            #         cali_err_arr.pop(i)
                     
 
 
-            apparent_mag_targ = 2.5*np.log10(targ_flux) + popt[1]
+            # apparent_mag_targ = 2.5*np.log10(targ_flux) + popt[1]
             
-            cali_err_fin = np.mean(cali_err_arr)
+            # cali_err_fin = np.mean(cali_err_arr)
             
-            final_err_in = np.sqrt((zp_err/popt[1])**2+(cali_err_fin)**2)
+            # final_err_in = np.sqrt((zp_err/popt[1])**2+(cali_err_fin)**2)
             
 
 
