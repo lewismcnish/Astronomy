@@ -236,7 +236,7 @@ def light_curve(star:str,band:str,exposure:str, radius: int = RADIUS, solver: bo
                     
                 plt.plot(r,flux)
                 plt.show()
-            
+            print('targ_flux',targ_flux)
             targ_flux=float(phot_table_source2[0]['aperture_sum_0'] - targcal)
             mag_targ=mag_cal1[0] + 2.5*np.log10(cal1_flux/targ_flux)
 
