@@ -11,7 +11,6 @@ def plot(juliandate: np.ndarray, magnitude: np.ndarray, mag_err: np.ndarray) -> 
     plt.errorbar(juliandate, magnitude, yerr=mag_err, fmt='o')
     plt.xlabel('Time (JD)')
     plt.ylabel('Magnitude')
-    plt.title('Light Curve')
     plt.show()    
 
 def plot_lc(file: str) -> None:

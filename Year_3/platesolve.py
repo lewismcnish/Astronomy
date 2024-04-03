@@ -32,8 +32,7 @@ from astroquery.exceptions import TimeoutError
 
 path_cal = '/Volumes/external_2T/calibration/2023-10/neg10c/master'
 path_data =  '/Volumes/external_2T'
-target_jd = []
-target_mags = []
+
 
 RADIUS = 19
 
@@ -45,7 +44,8 @@ def light_curve(star:str,band:str,exposure:str, radius: int = RADIUS, solver: bo
     Band is the colour band \n 
     Exposure is the exposure time in seconds (time with s)
     '''
-    
+    target_jd = []
+    target_mags = []
     data_cal = np.transpose(np.loadtxt(path_data + '/'+ 'cal_stars/' + star + '_calibration_stars.txt', skiprows=1, delimiter=","))
 
     mag_g_cal=data_cal[3]
@@ -120,6 +120,7 @@ def light_curve(star:str,band:str,exposure:str, radius: int = RADIUS, solver: bo
             sources.reverse()
             if counter == 0:
                 print(len(sources))
+                print(sources)
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++PLATE SOLVING++++++++++++++++++++++++++++++++++++++++++++++++++++
             try:
                 wcs_header = None 
@@ -179,7 +180,6 @@ def light_curve(star:str,band:str,exposure:str, radius: int = RADIUS, solver: bo
             # source1_aperture.plot(color='blue', lw=2, alpha=1)
             # source1_annulus.plot(color='deepskyblue', lw=2, alpha=1)
 
-
             source2_x, source2_y =(sources['xcentroid'] , sources['ycentroid'] )
 
             Coor_x, Coor_y = wcs.wcs_pix2world(source2_x, source2_y, 1) 
@@ -236,7 +236,6 @@ def light_curve(star:str,band:str,exposure:str, radius: int = RADIUS, solver: bo
                     
                 plt.plot(r,flux)
                 plt.show()
-            print('targ_flux',targ_flux)
             targ_flux=float(phot_table_source2[0]['aperture_sum_0'] - targcal)
             mag_targ=mag_cal1[0] + 2.5*np.log10(cal1_flux/targ_flux)
 
@@ -247,6 +246,6 @@ def light_curve(star:str,band:str,exposure:str, radius: int = RADIUS, solver: bo
             target_jd.append(t_jd)
             print(mag_targ)
             counter +=1
-
+    return target_jd, target_mags
 
 
