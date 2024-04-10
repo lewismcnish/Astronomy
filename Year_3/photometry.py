@@ -329,10 +329,10 @@ def photometry(star: str, band: str, radius: int,cal_index: int = 4, six_x_six: 
             for col in phot_table_source1.colnames:
                 phot_table_source1[col].info.format = '%.8g'  # for consistent table output
 
-            bkg_mean_cal1 = float(phot_table_source1[4]['aperture_sum_1'] / source1_annulus.area)
+            bkg_mean_cal1 = float(phot_table_source1[6]['aperture_sum_1'] / source1_annulus.area)
             bcal1 = bkg_mean_cal1 * source1_aperture.area
 
-            cal1_flux=float(phot_table_source1[4]['aperture_sum_0'] - bcal1)
+            cal1_flux=float(phot_table_source1[6]['aperture_sum_0'] - bcal1)
 
 
             for col in phot_table_source2.colnames:

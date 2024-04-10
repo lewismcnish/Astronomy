@@ -4,7 +4,8 @@ font.style: normal
 font.variant: normal
 font.weight: normal
 
-axes.labelsize: 20
+axes.labelsize: 28
+ 
 axes.linewidth: 1.0
 axes.titlesize: 24.0
 
