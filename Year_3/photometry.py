@@ -283,18 +283,16 @@ def photometry(star: str, band: str, radius: int,cal_index: int = 4, six_x_six: 
             sources.sort('flux')
             sources.reverse()
             if counter == 0:
-                
+                print(img_header['OBJCTDEC'],img_header['OBJCTRA'])
                 print((sources))
             wcs = WCS(img_header)
         
-            N_source=20
             # number of calibration stars to plot
             # print(wcs.wcs_pix2world(sources['xcentroid'], sources['ycentroid'], 1))
 
 
             # plot yellow circles around the sources found by DAO starfinder
             positions_dao = np.transpose((sources['xcentroid'], sources['ycentroid']))  
-            apertures_define = CircularAperture(positions_dao, r=25)
 
 
             r1=radius
@@ -331,10 +329,10 @@ def photometry(star: str, band: str, radius: int,cal_index: int = 4, six_x_six: 
             for col in phot_table_source1.colnames:
                 phot_table_source1[col].info.format = '%.8g'  # for consistent table output
 
-            bkg_mean_cal1 = float(phot_table_source1[0]['aperture_sum_1'] / source1_annulus.area)
+            bkg_mean_cal1 = float(phot_table_source1[4]['aperture_sum_1'] / source1_annulus.area)
             bcal1 = bkg_mean_cal1 * source1_aperture.area
 
-            cal1_flux=float(phot_table_source1[0]['aperture_sum_0'] - bcal1)
+            cal1_flux=float(phot_table_source1[4]['aperture_sum_0'] - bcal1)
 
 
             for col in phot_table_source2.colnames:
@@ -382,7 +380,7 @@ def photometry(star: str, band: str, radius: int,cal_index: int = 4, six_x_six: 
                 
     # ----------------------------------------------------------------------------------------------------------------------------
             targ_flux=float(phot_table_source2[cal_index]['aperture_sum_0'] - targcal)
-            mag_targ=mag_cal1[0] + 2.5*np.log10(cal1_flux/targ_flux)
+            mag_targ=mag_cal1[4] + 2.5*np.log10(cal1_flux/targ_flux)
 
             t_fits=img_header['DATE-OBS']
             t = Time(t_fits, format='isot', scale='utc')
