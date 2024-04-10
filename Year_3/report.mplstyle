@@ -1,11 +1,10 @@
 font.family: Times New Roman
-font.size: 14.0
+font.size: 20
 font.style: normal
 font.variant: normal
 font.weight: normal
 
-axes.labelsize: 28
- 
+axes.labelsize: 20
 axes.linewidth: 1.0
 axes.titlesize: 24.0
 
