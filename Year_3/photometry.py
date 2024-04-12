@@ -116,7 +116,7 @@ def platesolve(star,band,solver:bool = True, six_x_six: bool = True):
         Band of the images.
     solver : bool
         If True, the function uses the online server. If False, the function uses the Giles server.'''
-    
+    plt.style.use('report.mplstyle')
     if six_x_six == True:
         
         path_data =  '/Volumes/external_2T/corrected/6x6'
@@ -359,6 +359,9 @@ def photometry(star: str, band: str, radius: int,cal_index: int = 4, six_x_six: 
             if counter == 0:
                 flux = []
                 plt.figure()
+                plt.ylabel('Flux')
+                plt.xlabel('Radius')
+                
                 for i in np.arange(1,31,1):
                     
                     source2 = np.transpose((source2_x, source2_y))
@@ -373,7 +376,7 @@ def photometry(star: str, band: str, radius: int,cal_index: int = 4, six_x_six: 
                     targcal = bkg_mean_targ * source2_aperture.area
                     targ_flux=float(phot_table_source2[cal_index]['aperture_sum_0'] - targcal)
                     flux.append(targ_flux)
-                    
+                plt.savefig('graphs/growth_curve.pdf')
                 plt.plot(r,flux)
                 plt.show()
                 
