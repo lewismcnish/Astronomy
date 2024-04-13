@@ -358,9 +358,9 @@ def photometry(star: str, band: str, radius: int,cal_index: int = 4, six_x_six: 
     # ---------------------------------------Growth Curve-------------------------------------------------------------------
             if counter == 0:
                 flux = []
-                plt.figure()
-                plt.ylabel('Flux')
-                plt.xlabel('Radius')
+                plt.figure(figsize=(10,10))
+                plt.ylabel('Flux e$^-$ pixel$^{-2}$')
+                plt.xlabel('Radius (pixels)')
                 
                 for i in np.arange(1,31,1):
                     
@@ -376,8 +376,11 @@ def photometry(star: str, band: str, radius: int,cal_index: int = 4, six_x_six: 
                     targcal = bkg_mean_targ * source2_aperture.area
                     targ_flux=float(phot_table_source2[cal_index]['aperture_sum_0'] - targcal)
                     flux.append(targ_flux)
-                plt.savefig('graphs/growth_curve.pdf')
-                plt.plot(r,flux)
+                
+                plt.plot(r,flux, color = 'blue', label = 'Curve of Growth')
+                plt.vlines(9, min(flux), max(flux), color = 'red', linestyle = '--', label = 'Aperture Radius = 9')
+                plt.legend()
+                plt.savefig('graphs/growth_curve.pdf', bbox_inches='tight', pad_inches=0.1)
                 plt.show()
                 
                 
@@ -395,9 +398,9 @@ def photometry(star: str, band: str, radius: int,cal_index: int = 4, six_x_six: 
         
     dict = {'JD': target_jd, 'Mag': cal_star_mags, 'Air Mass': air_mass}
     df = pd.DataFrame(dict)
-    if six_x_six == True:
-        df.to_csv('airmass/6x6/'+band[4]+'/cal_star_'+str(cal_index)+'_'+band[4]+'_airmass.csv')
-    else:
-        df.to_csv('airmass/'+star+'/'+band[4]+'/cal_star_'+str(cal_index)+'_'+band[4]+'_airmass.csv')
+    # if six_x_six == True:
+    #     df.to_csv('airmass/6x6/'+band[4]+'/cal_star_'+str(cal_index)+'_'+band[4]+'_airmass.csv')
+    # else:
+    #     df.to_csv('airmass/'+star+'/'+band[4]+'/cal_star_'+str(cal_index)+'_'+band[4]+'_airmass.csv')
     return target_jd, cal_star_mags, air_mass
     
